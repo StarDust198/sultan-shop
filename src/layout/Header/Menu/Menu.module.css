@@ -1,0 +1,36 @@
+.menu {
+	display: flex;
+	align-items: center;
+
+	height: 60px;	
+
+	font-size: 14px;
+	line-height: 1.3;
+}
+
+.contacts {
+	display: flex;
+	flex-grow: 1;
+	gap: 40px;
+}
+
+.nav {
+	display: flex;
+	gap: 30px;
+	align-items: center;
+	color: var(--dark-gray);
+}
+
+.navLink:hover {
+	text-decoration: underline;
+}
+
+.divider {
+	height: 30px;
+}
+
+@media (min-width: 700px) {
+	.menu .phone {
+		display: none;
+	}
+}

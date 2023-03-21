@@ -1,0 +1,24 @@
+.contact {
+	display: flex;
+	gap: 15px;
+}
+
+.icon {
+	width: 20px;
+	height: 38px;
+}
+
+.text {
+	font-weight: 300;
+}
+
+.bold {
+	display: block;
+	font-weight: 600;
+	color: var(--black);
+}
+
+.subDescription {
+	display: block;
+	margin-top: 5px;
+}

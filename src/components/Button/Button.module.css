@@ -1,0 +1,25 @@
+.button {
+	cursor: pointer;
+
+	display: block;
+	display: flex;
+	gap: 12px;
+	align-items: center;
+
+	padding: 20px 50px;
+
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 1.2;
+	color: var(--white);
+	white-space: nowrap;
+
+	background: var(--orange);
+	border: none;
+	border-radius: 79px;
+}
+
+.icon {
+	width: 15px;
+	height: 15px;
+}

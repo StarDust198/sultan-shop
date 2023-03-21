@@ -1,0 +1,42 @@
+.headerMain {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 25px;
+	padding-block: 12px;
+}
+
+.block {
+	display: flex;
+	align-items: center;
+}
+
+.divider {
+	height: 50px;
+}
+
+.blockOne {
+	gap: 15px;
+}
+
+.blockTwo {
+	gap: 24px;
+	justify-self: end;
+}
+
+.catalogBtn {
+	margin-left: 22px;
+}
+
+.input {
+	flex-grow: 1;
+}
+
+@media (max-width: 1320px) {
+	.headerMain {
+		/* grid-template-columns: 1fr; */
+	}
+
+	.input {
+		flex-grow: unset;
+	}
+}

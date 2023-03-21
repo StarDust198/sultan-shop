@@ -1,27 +1,239 @@
-// - Url картинки
-// - название
-// - тип размера (вес/объем)
-// - размер
-// - штрихкод
-// - производитель
-// - Бренд
-// - описание
-// - цена
-
 [
   {
-    "picSrc": "",
-    "title": "",
-    "sizeType": "",
-    "size": 0,
-    "code": 12345,
-    "manufacturer": "",
-    "brand": "",
-    "description": "",
-    "price": 1000,
-    "groups": [
-			"hand",
-			"face"
-		]
+    "picSrc": "./assests/goods/goods1.png",
+    "title": "AOS Ср-во для мытья посуды Апельсин+мята",
+    "sizeType": "volume",
+    "size": "450 мл",
+    "code": 4604049097548,
+    "manufacturer": "Нэфис",
+    "brand": "AOS",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo, vestibulum sagittis iaculis iaculis. Quis mattis vulputate feugiat massa vestibulum duis.",
+    "price": 48.76,
+    "groups": ["hand", "face"]
+  },
+  {
+    "picSrc": "./assests/goods/goods2.png",
+    "title": "AOS средство для мытья посуды Crystal",
+    "sizeType": "volume",
+    "size": "450 мл",
+    "code": 4604049097548,
+    "manufacturer": "Нэфис",
+    "brand": "AOS",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo, vestibulum sagittis iaculis iaculis. Quis mattis vulputate feugiat massa vestibulum duis.",
+    "price": 48.76,
+    "groups": ["hand", "face"]
+  },
+  {
+    "picSrc": "./assests/goods/goods3.png",
+    "title": "AOS средство для мытья посуды Crystal",
+    "sizeType": "weight",
+    "size": "15X28.8 г",
+    "code": 4604049097548,
+    "manufacturer": "Нэфис",
+    "brand": "AOS",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo, vestibulum sagittis iaculis iaculis. Quis mattis vulputate feugiat massa vestibulum duis.",
+    "price": 48.76,
+    "groups": ["hand", "face"]
+  },
+  {
+    "picSrc": "./assests/goods/goods4.png",
+    "title": "BIMAX Порошок стиральный Автомат 100 пятен COMPACT",
+    "sizeType": "weight",
+    "size": "1500 г",
+    "code": 4604049097548,
+    "manufacturer": "Нэфис",
+    "brand": "AOS",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo, vestibulum sagittis iaculis iaculis. Quis mattis vulputate feugiat massa vestibulum duis.",
+    "price": 48.76,
+    "groups": ["hand", "face"]
+  },
+  {
+    "picSrc": "./assests/goods/goods5.png",
+    "title": "BioMio BIO-SOAP Экологичное туалетное мыло. Литсея и бергамот",
+    "sizeType": "weight",
+    "size": "90 г",
+    "code": 4604049097548,
+    "manufacturer": "BioMio",
+    "brand": "BioMio",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo, vestibulum sagittis iaculis iaculis. Quis mattis vulputate feugiat massa vestibulum duis.",
+    "price": 48.76,
+    "groups": ["hand", "face"]
+  },
+    "picSrc": "./assests/goods/goods1.png",
+    "title": "AOS Ср-во для мытья посуды Апельсин+мята",
+    "sizeType": "volume",
+    "size": "450 мл",
+    "code": 4604049097548,
+    "manufacturer": "Нэфис",
+    "brand": "AOS",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo, vestibulum sagittis iaculis iaculis. Quis mattis vulputate feugiat massa vestibulum duis.",
+    "price": 48.76,
+    "groups": ["hand", "face"]
+  },
+  {
+    "picSrc": "./assests/goods/goods2.png",
+    "title": "AOS средство для мытья посуды Crystal",
+    "sizeType": "volume",
+    "size": "450 мл",
+    "code": 4604049097548,
+    "manufacturer": "Нэфис",
+    "brand": "AOS",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo, vestibulum sagittis iaculis iaculis. Quis mattis vulputate feugiat massa vestibulum duis.",
+    "price": 48.76,
+    "groups": ["hand", "face"]
+  },
+  {
+    "picSrc": "./assests/goods/goods3.png",
+    "title": "AOS средство для мытья посуды Crystal",
+    "sizeType": "weight",
+    "size": "15X28.8 г",
+    "code": 4604049097548,
+    "manufacturer": "Нэфис",
+    "brand": "AOS",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo, vestibulum sagittis iaculis iaculis. Quis mattis vulputate feugiat massa vestibulum duis.",
+    "price": 48.76,
+    "groups": ["hand", "face"]
+  },
+  {
+    "picSrc": "./assests/goods/goods4.png",
+    "title": "BIMAX Порошок стиральный Автомат 100 пятен COMPACT",
+    "sizeType": "weight",
+    "size": "1500 г",
+    "code": 4604049097548,
+    "manufacturer": "Нэфис",
+    "brand": "AOS",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo, vestibulum sagittis iaculis iaculis. Quis mattis vulputate feugiat massa vestibulum duis.",
+    "price": 48.76,
+    "groups": ["hand", "face"]
+  },
+  {
+    "picSrc": "./assests/goods/goods5.png",
+    "title": "BioMio BIO-SOAP Экологичное туалетное мыло. Литсея и бергамот",
+    "sizeType": "weight",
+    "size": "90 г",
+    "code": 4604049097548,
+    "manufacturer": "BioMio",
+    "brand": "BioMio",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo, vestibulum sagittis iaculis iaculis. Quis mattis vulputate feugiat massa vestibulum duis.",
+    "price": 48.76,
+    "groups": ["hand", "face"]
+  },
+    "picSrc": "./assests/goods/goods1.png",
+    "title": "AOS Ср-во для мытья посуды Апельсин+мята",
+    "sizeType": "volume",
+    "size": "450 мл",
+    "code": 4604049097548,
+    "manufacturer": "Нэфис",
+    "brand": "AOS",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo, vestibulum sagittis iaculis iaculis. Quis mattis vulputate feugiat massa vestibulum duis.",
+    "price": 48.76,
+    "groups": ["hand", "face"]
+  },
+  {
+    "picSrc": "./assests/goods/goods2.png",
+    "title": "AOS средство для мытья посуды Crystal",
+    "sizeType": "volume",
+    "size": "450 мл",
+    "code": 4604049097548,
+    "manufacturer": "Нэфис",
+    "brand": "AOS",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo, vestibulum sagittis iaculis iaculis. Quis mattis vulputate feugiat massa vestibulum duis.",
+    "price": 48.76,
+    "groups": ["hand", "face"]
+  },
+  {
+    "picSrc": "./assests/goods/goods3.png",
+    "title": "AOS средство для мытья посуды Crystal",
+    "sizeType": "weight",
+    "size": "15X28.8 г",
+    "code": 4604049097548,
+    "manufacturer": "Нэфис",
+    "brand": "AOS",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo, vestibulum sagittis iaculis iaculis. Quis mattis vulputate feugiat massa vestibulum duis.",
+    "price": 48.76,
+    "groups": ["hand", "face"]
+  },
+  {
+    "picSrc": "./assests/goods/goods4.png",
+    "title": "BIMAX Порошок стиральный Автомат 100 пятен COMPACT",
+    "sizeType": "weight",
+    "size": "1500 г",
+    "code": 4604049097548,
+    "manufacturer": "Нэфис",
+    "brand": "AOS",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo, vestibulum sagittis iaculis iaculis. Quis mattis vulputate feugiat massa vestibulum duis.",
+    "price": 48.76,
+    "groups": ["hand", "face"]
+  },
+  {
+    "picSrc": "./assests/goods/goods5.png",
+    "title": "BioMio BIO-SOAP Экологичное туалетное мыло. Литсея и бергамот",
+    "sizeType": "weight",
+    "size": "90 г",
+    "code": 4604049097548,
+    "manufacturer": "BioMio",
+    "brand": "BioMio",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo, vestibulum sagittis iaculis iaculis. Quis mattis vulputate feugiat massa vestibulum duis.",
+    "price": 48.76,
+    "groups": ["hand", "face"]
+  },
+    "picSrc": "./assests/goods/goods1.png",
+    "title": "AOS Ср-во для мытья посуды Апельсин+мята",
+    "sizeType": "volume",
+    "size": "450 мл",
+    "code": 4604049097548,
+    "manufacturer": "Нэфис",
+    "brand": "AOS",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo, vestibulum sagittis iaculis iaculis. Quis mattis vulputate feugiat massa vestibulum duis.",
+    "price": 48.76,
+    "groups": ["hand", "face"]
+  },
+  {
+    "picSrc": "./assests/goods/goods2.png",
+    "title": "AOS средство для мытья посуды Crystal",
+    "sizeType": "volume",
+    "size": "450 мл",
+    "code": 4604049097548,
+    "manufacturer": "Нэфис",
+    "brand": "AOS",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo, vestibulum sagittis iaculis iaculis. Quis mattis vulputate feugiat massa vestibulum duis.",
+    "price": 48.76,
+    "groups": ["hand", "face"]
+  },
+  {
+    "picSrc": "./assests/goods/goods3.png",
+    "title": "AOS средство для мытья посуды Crystal",
+    "sizeType": "weight",
+    "size": "15X28.8 г",
+    "code": 4604049097548,
+    "manufacturer": "Нэфис",
+    "brand": "AOS",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo, vestibulum sagittis iaculis iaculis. Quis mattis vulputate feugiat massa vestibulum duis.",
+    "price": 48.76,
+    "groups": ["hand", "face"]
+  },
+  {
+    "picSrc": "./assests/goods/goods4.png",
+    "title": "BIMAX Порошок стиральный Автомат 100 пятен COMPACT",
+    "sizeType": "weight",
+    "size": "1500 г",
+    "code": 4604049097548,
+    "manufacturer": "Нэфис",
+    "brand": "AOS",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo, vestibulum sagittis iaculis iaculis. Quis mattis vulputate feugiat massa vestibulum duis.",
+    "price": 48.76,
+    "groups": ["hand", "face"]
+  },
+  {
+    "picSrc": "./assests/goods/goods5.png",
+    "title": "BioMio BIO-SOAP Экологичное туалетное мыло. Литсея и бергамот",
+    "sizeType": "weight",
+    "size": "90 г",
+    "code": 4604049097548,
+    "manufacturer": "BioMio",
+    "brand": "BioMio",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo, vestibulum sagittis iaculis iaculis. Quis mattis vulputate feugiat massa vestibulum duis.",
+    "price": 48.76,
+    "groups": ["hand", "face"]
   }
 ]
