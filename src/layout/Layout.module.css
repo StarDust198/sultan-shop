@@ -1,1 +1,8 @@
-.layout {}
+.layout {
+	display: grid;
+	min-height: 100vh;
+}
+
+.footer {
+	align-self: end;
+}

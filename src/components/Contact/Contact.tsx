@@ -1,9 +1,10 @@
-import { DetailedHTMLProps, HTMLAttributes } from 'react';
+import {
+  DetailedHTMLProps,
+  FunctionComponent,
+  HTMLAttributes,
+  SVGProps,
+} from 'react';
 import cn from 'classnames';
-
-import { ReactComponent as MapIcon } from './map.svg';
-import { ReactComponent as MailIcon } from './mail.svg';
-import { ReactComponent as PhoneIcon } from './phone.svg';
 
 import styles from './Contact.module.css';
 
@@ -11,25 +12,29 @@ interface ContactProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   title: string;
   description: string;
-  icon: 'phone' | 'map' | 'mail';
+  Icon?: FunctionComponent<SVGProps<SVGSVGElement>> | null;
+  color?: 'black' | 'white';
   subDescription?: string;
 }
 
 export const Contact = ({
   title,
   description,
-  icon,
+  Icon = null,
+  color = 'black',
   subDescription,
   className,
   ...props
 }: ContactProps) => {
   return (
     <div className={cn(styles.contact, className)} {...props}>
-      {icon === 'phone' && <PhoneIcon className={styles.icon} />}
-      {icon === 'map' && <MapIcon className={styles.icon} />}
-      {icon === 'mail' && <MailIcon className={styles.icon} />}
+      {Icon && <Icon className={styles.icon} />}
 
-      <div className={styles.text}>
+      <div
+        className={cn(styles.text, {
+          [styles.white]: color === 'white',
+        })}
+      >
         <span className={styles.bold}>{title}</span>
         {description}
         {subDescription && (

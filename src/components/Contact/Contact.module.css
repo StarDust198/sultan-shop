@@ -10,12 +10,22 @@
 
 .text {
 	font-weight: 300;
+	font-size: 12px;
+}
+
+.white {
+	color: var(--white);
 }
 
 .bold {
 	display: block;
 	font-weight: 600;
 	color: var(--black);
+	font-size: 14px;
+}
+
+.white .bold {
+	color: var(--white);
 }
 
 .subDescription {

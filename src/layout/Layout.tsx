@@ -14,6 +14,6 @@ export const Layout = ({ children }: LayoutProps) => (
   <div className={styles.layout}>
     <Header />
     <Container>{children}</Container>
-    <Footer />
+    <Footer className={styles.footer} />
   </div>
 );

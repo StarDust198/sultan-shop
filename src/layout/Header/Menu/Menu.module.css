@@ -29,8 +29,39 @@
 	height: 30px;
 }
 
-@media (min-width: 700px) {
-	.menu .phone {
-		display: none;
+@media (max-width: 1100px) {
+	.menu {
+		background: var(--white);
+		height: auto;
+		z-index: 10;
+		flex-direction: column;
+		padding-block: 20px;
+
+	}
+
+	.contacts {
+		flex-direction: column;
+		gap: 20px;
+		flex-wrap: wrap;
+		height: 100px;
+		width: 50%;
+	}
+
+	.nav {
+		flex-direction: column;
+		gap: 30px;
+		flex-wrap: wrap;
+		height: 100px;
+		width: 50%;
+	}
+
+	.dividerHorizontal {
+		margin-block: 25px;
+	}
+
+	.navTitle {
+		margin-bottom: 25px;
+		font-size: 20px;
+		font-weight: 600;
 	}
 }

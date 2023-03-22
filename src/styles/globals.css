@@ -6,7 +6,7 @@ body {
 	font-family: Inter, sans-serif;
 	color: var(--gray-dark);
 
-	background: #F9F8FF;
+	background: var(--white);
 }
 
 a {

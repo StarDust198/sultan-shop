@@ -1,1 +1,81 @@
-.footer {}
+.footer {
+	background: var(--gray-dark);
+	min-height: 500px;
+	color: #fff;
+	padding-top: 72px;
+	padding-bottom: 116px;
+	line-height: 1.5;
+}
+
+.footerWrapper {
+	display: grid;
+	gap: 0 50px;
+	grid-template-columns: repeat(5, auto);
+	grid-template-rows: min-content min-content 1fr;
+	justify-content: space-between;
+	grid-template-areas: 
+		"footerLogo footerMenu footerCategory footerPrice footerContacts"
+		"footerInfo footerMenu footerCategory footerPrice footerContacts"
+		"footerInfo footerMenu footerCategory footerMessengers footerContacts";	
+}
+
+.footerLogo {
+	grid-area: footerLogo;
+}
+.footerInfo {
+	grid-area: footerInfo;
+	margin-top: 15px; 
+	max-width: 320px;
+}
+.footerInput {
+	max-width: 290px;
+}
+.footerMenu {
+	grid-area: footerMenu;
+}
+.footerCategory {
+	grid-area: footerCategory;
+}
+.footerPrice {
+	grid-area: footerPrice;
+}
+.footerMessengers {
+	grid-area: footerMessengers;
+}
+.footerContacts {
+	grid-area: footerContacts;
+}
+
+.footerSubscribe {
+	margin-top: 45px;
+	font-size: 12px;
+}
+.footerInput {
+	margin-top: 14px;
+}
+.footerTitle {
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 25px;
+}
+.footerItem {
+	margin-top: 20px;
+	font-size: 14px;
+}
+.footerMessengers {
+	margin-top: 20px;
+	font-size: 14px;
+}
+.footerMessengerLinks {
+	display: flex;
+	margin-top: 15px;
+	gap: 10px;
+}
+.footerContacts > * {
+	margin-bottom: 25px;
+}
+.footerPayments {
+	display: flex;
+	gap: 5px;
+}
+

@@ -11,4 +11,6 @@
 .vertical {
 	width: 0;
 	border: 0.5px dashed var(--gray);
+	display: block;
+	margin: 0 auto;
 }
