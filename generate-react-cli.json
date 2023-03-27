@@ -1,13 +1,13 @@
 {
   "usesTypeScript": true,
   "usesCssModule": true,
-  "cssPreprocessor": "css",
+  "cssPreprocessor": "scss",
   "testLibrary": "Testing Library",
   "component": {
     "default": {
       "customTemplates": {
         "component": "templates/default/TemplateName.tsx",
-        "style": "templates/default/TemplateName.module.css",
+        "style": "templates/default/TemplateName.module.scss",
         "index": "templates/default/index.ts"
       },
       "path": "src/components",

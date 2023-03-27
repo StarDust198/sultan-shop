@@ -1,4 +1,4 @@
-import styles from './GoodsCard.module.css';
+import styles from './GoodsCard.module.scss';
 
 interface GoodsCardProps {}
 

@@ -1,0 +1,34 @@
+.contact {
+  display: flex;
+  gap: 15px;
+
+  &Icon {
+    width: 20px;
+    height: 38px;
+  }
+
+  &Text {
+    font-size: 12px;
+    font-weight: 300;
+  }
+
+  &Bold {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--black);
+  }
+
+  &SubDescription {
+    display: block;
+    margin-top: 5px;
+  }
+
+  &White {
+    color: var(--white);
+
+    &Bold {
+      color: var(--white);
+    }
+  }
+}

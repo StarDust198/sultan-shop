@@ -1,0 +1,56 @@
+@import '../../styles/variables';
+
+@media (max-width: $l) {
+  .header {
+    position: relative;
+    z-index: 10;
+    height: 92px;
+    background: $white;
+
+    &Main {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+    }
+
+    &Menu {
+      position: fixed;
+      top: -100%;
+      right: 0;
+      left: 0;
+
+      background: $white;
+
+      transition: top 0.5s ease-in-out;
+
+      &Open {
+        top: 92px;
+      }
+    }
+  }
+}
+
+@media (max-width: $m) {
+  .header {
+    height: 172px;
+
+    &Menu {
+      &Open {
+        top: 172px;
+      }
+    }
+  }
+}
+
+@media (max-width: $s) {
+  .header {
+    height: 118px;
+
+    &Menu {
+      &Open {
+        top: 118px;
+      }
+    }
+  }
+}

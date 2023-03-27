@@ -1,9 +1,9 @@
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
 import cn from 'classnames';
 
-import { ReactComponent as CartIcon } from './cart.svg';
+import { ReactComponent as CartIcon } from 'assets/cart.svg';
 
-import styles from './Cart.module.css';
+import styles from './Cart.module.scss';
 
 interface CartProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
@@ -12,7 +12,7 @@ interface CartProps
 
 export const Cart = ({ withInfo = true, className, ...props }: CartProps) => {
   return (
-    <div className={cn(styles.cartWrapper, className)} {...props}>
+    <div className={cn(styles.cart, className)} {...props}>
       <div className={styles.cartImg}>
         <CartIcon />
         <div className={styles.cartBadge}>3</div>

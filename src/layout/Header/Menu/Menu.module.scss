@@ -1,0 +1,127 @@
+@import '../../../styles/variables';
+
+.menu {
+  &Wrapper {
+    display: flex;
+    align-items: center;
+
+    height: 60px;
+
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  &Contacts {
+    display: flex;
+    flex-grow: 1;
+    gap: 40px;
+  }
+
+  &Nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    color: $gray-dark;
+
+    &Link:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &Divider {
+    height: 30px;
+  }
+}
+
+@media (max-width: $l) {
+  .menu {
+    &Wrapper {
+      z-index: 10;
+
+      flex-direction: column;
+
+      height: auto;
+      padding-block: 20px;
+
+      background: $white;
+    }
+
+    &Contacts {
+      flex-flow: column wrap;
+      gap: 20px;
+      width: 50%;
+      height: 100px;
+    }
+
+    &Phone {
+      &Order {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        margin-top: -8px;
+      }
+
+      &Btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 30px;
+        height: 30px;
+
+        background: $orange;
+        border-radius: 50%;
+      }
+
+      &Link {
+        font-size: 10px;
+        text-decoration: underline;
+      }
+    }
+
+    &DividerHorizontal {
+      margin-block: 25px;
+    }
+
+    &Nav {
+      flex-flow: column wrap;
+      gap: 30px;
+      width: 50%;
+      height: 100px;
+
+      &Title {
+        margin-bottom: 25px;
+        font-size: 20px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@media (max-width: $m) {
+  .menu {
+    &Contacts {
+      width: 80%;
+    }
+  }
+}
+
+@media (max-width: $s) {
+  .menu {
+    &Wrapper {
+      align-items: start;
+    }
+
+    &Contacts,
+    &Nav {
+      align-items: start;
+      width: unset;
+      height: unset;
+    }
+
+    &PriceBtn {
+      width: 100%;
+      margin-top: 22px;
+    }
+  }
+}

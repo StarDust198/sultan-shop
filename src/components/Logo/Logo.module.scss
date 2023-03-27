@@ -1,0 +1,14 @@
+@import '../../styles/variables';
+
+.logo {
+  &Light {
+    fill: $white;
+  }
+}
+
+@media (max-width: $s) {
+  .logo {
+    width: 97px;
+    height: 41px;
+  }
+}

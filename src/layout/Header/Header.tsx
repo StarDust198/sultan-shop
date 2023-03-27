@@ -1,13 +1,11 @@
 import { useState } from 'react';
 import cn from 'classnames';
 
-import { Divider } from 'components';
-import { HeaderMain } from './HeaderMain';
-import { Menu } from './Menu';
-import { Container } from 'layout/Container';
-import { Overlay } from 'layout/Overlay';
+import { HeaderMain } from './HeaderMain/HeaderMain';
+import { Menu } from './Menu/Menu';
+import { Overlay } from '../Overlay/Overlay';
 
-import styles from './Header.module.css';
+import styles from './Header.module.scss';
 
 interface HeaderProps {}
 
@@ -21,18 +19,17 @@ export const Header = ({}: HeaderProps) => {
   return (
     <>
       <header className={styles.header}>
-        <Container>
-          <Menu
-            className={cn(styles.headerMenu, {
-              [styles.headerMenuOpen]: menuOpen,
-            })}
-          />
-        </Container>
-        <Divider />
-        <Container>
-          <HeaderMain menuOpen={menuOpen} switchMenu={switchMenu} />
-        </Container>
-        <Divider />
+        <Menu
+          className={cn(styles.headerMenu, {
+            [styles.headerMenuOpen]: menuOpen,
+          })}
+        />
+        {/* <Divider /> */}
+        <HeaderMain
+          className={styles.headerMain}
+          menuOpen={menuOpen}
+          switchMenu={switchMenu}
+        />
       </header>
       {menuOpen && <Overlay />}
     </>

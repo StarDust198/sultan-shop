@@ -1,0 +1,168 @@
+@import '../../../styles/variables';
+
+.headerMain {
+  z-index: 10;
+  background: $white;
+
+  &Wrapper {
+    display: grid;
+    grid-template-areas:
+      'dividerTop dividerTop dividerTop dividerTop dividerTop dividerTop dividerTop dividerTop'
+      'logo catalogBtn input callMe . priceBtn . cart';
+    grid-template-columns: repeat(8, auto);
+    gap: 12px 15px;
+    align-items: center;
+    justify-content: stretch;
+
+    padding-bottom: 12px;
+  }
+
+  &Logo {
+    grid-area: logo;
+  }
+
+  &CatalogBtn {
+    grid-area: catalogBtn;
+    margin-left: 15px;
+  }
+
+  &Input {
+    grid-area: input;
+    min-width: 220px;
+  }
+
+  &CallMe {
+    grid-area: callMe;
+  }
+
+  &PriceBtn {
+    grid-area: priceBtn;
+  }
+
+  &Cart {
+    grid-area: cart;
+  }
+
+  &Divider {
+    height: 50px;
+
+    &Top {
+      position: relative;
+      left: -24px;
+      grid-area: dividerTop;
+      width: calc(100% + 48px);
+    }
+  }
+}
+
+@media (max-width: $xl) {
+  .headerMain {
+    &Wrapper {
+      grid-template-areas:
+        'dividerTop dividerTop dividerTop dividerTop dividerTop dividerTop'
+        'logo catalogBtn input callMe priceBtn cart';
+      grid-template-columns: repeat(6, auto);
+    }
+
+    &Input {
+      flex-grow: unset;
+    }
+  }
+}
+
+@media (max-width: $l) {
+  .headerMain {
+    &Wrapper {
+      position: sticky;
+      z-index: 15;
+      top: 0;
+      right: 0;
+      left: 0;
+
+      grid-template-areas:
+        'dividerTop dividerTop dividerTop dividerTop dividerTop'
+        'menuBtn logo catalogBtn input cart';
+      grid-template-columns: repeat(5, auto);
+
+      background-color: $white;
+    }
+
+    &MenuBtn {
+      position: relative;
+
+      display: flex;
+      grid-area: menuBtn;
+      align-items: center;
+      justify-content: center;
+
+      width: 52px;
+      height: 52px;
+
+      background: $orange;
+      border: none;
+      border-radius: 50%;
+
+      svg {
+        width: 22px;
+        height: 22px;
+      }
+    }
+
+    &CatalogBtn {
+      margin-left: unset;
+    }
+
+    &Input {
+      min-width: unset;
+    }
+  }
+}
+
+@media (max-width: $m) {
+  .headerMain {
+    &Wrapper {
+      grid-template-areas:
+        'menuBtn logo cart'
+        'dividerTop dividerTop dividerTop'
+        'catalogBtn . input';
+      grid-template-columns: 1fr 11px 1fr;
+      padding-top: 12px;
+    }
+
+    &Logo {
+      transform: translateX(-50%);
+      padding-bottom: 5px;
+    }
+
+    &Cart {
+      justify-self: end;
+    }
+  }
+}
+
+@media (max-width: $s) {
+  .headerMain {
+    &Wrapper {
+      gap: 5px;
+      padding-top: 10px;
+      padding-bottom: 5px;
+    }
+
+    &MenuBtn {
+      width: 32px;
+      height: 32px;
+
+      svg {
+        width: 12px;
+        height: 12px;
+      }
+    }
+
+    &Divider {
+      &Top {
+        left: -15px;
+        width: calc(100% + 30px);
+      }
+    }
+  }
+}

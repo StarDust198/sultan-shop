@@ -1,4 +1,4 @@
-import styles from './PageTitle.module.css';
+import styles from './PageTitle.module.scss';
 
 interface PageTitleProps {}
 

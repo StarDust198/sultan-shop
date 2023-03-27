@@ -1,0 +1,8 @@
+.layout {
+  display: grid;
+  min-height: 100vh;
+
+  &Footer {
+    align-self: end;
+  }
+}

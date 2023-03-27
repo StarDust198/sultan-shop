@@ -1,0 +1,13 @@
+@import '../../styles/variables';
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-inline: 24px;
+}
+
+@media (max-width: $s) {
+  .container {
+    padding-inline: 15px;
+  }
+}

@@ -1,9 +1,9 @@
 import { DetailedHTMLProps, HTMLAttributes, useEffect, useState } from 'react';
 import cn from 'classnames';
 
-import service from './service.png';
+import service from 'assets/service.png';
 
-import styles from './CallMe.module.css';
+import styles from './CallMe.module.scss';
 
 interface CallMeProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
@@ -34,22 +34,22 @@ export const CallMe = ({
 
   return (
     <div
-      className={cn(styles.wrapper, className, {
-        [styles.wrapperWithImage]: withImage,
-        [styles.white]: color === 'white',
-        [styles.left]: align === 'left',
+      className={cn(styles.callMe, className, {
+        [styles.callMeWithImage]: withImage,
+        [styles.callMeWhite]: color === 'white',
+        [styles.callMeLeft]: align === 'left',
       })}
       {...props}
     >
-      <div className={styles.phone}>+7 (777) 490-00-91</div>
-      <div className={styles.time}>
+      <div className={styles.callMePhone}>+7 (777) 490-00-91</div>
+      <div className={styles.callMeTime}>
         <span>время работы:</span> <span>9:00-20:00</span>
       </div>
-      <button className={styles.order}>Заказать звонок</button>
+      <button className={styles.callMeOrder}>Заказать звонок</button>
       {withImage && (
         <div
-          className={cn(styles.img, {
-            [styles.online]: online,
+          className={cn(styles.callMeImg, {
+            [styles.callMeOnline]: online,
           })}
         >
           <img src={service} alt="operator" />

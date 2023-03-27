@@ -1,7 +1,7 @@
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
 import cn from 'classnames';
 
-import styles from './Divider.module.css';
+import styles from './Divider.module.scss';
 
 interface DividerProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLHRElement>, HTMLHRElement> {
@@ -15,7 +15,7 @@ export const Divider = ({
 }: DividerProps) => (
   <hr
     className={cn(styles.divider, className, {
-      [styles.vertical]: angle === 'vertical',
+      [styles.dividerVertical]: angle === 'vertical',
     })}
     {...props}
   />

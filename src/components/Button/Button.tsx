@@ -6,7 +6,7 @@ import {
 } from 'react';
 import cn from 'classnames';
 
-import styles from './Button.module.css';
+import styles from './Button.module.scss';
 
 interface ButtonProps
   extends Omit<
@@ -16,12 +16,14 @@ interface ButtonProps
   link?: boolean;
   text?: string;
   Icon?: FunctionComponent<SVGProps<SVGSVGElement>> | null;
+  transparent?: boolean;
 }
 
 export const Button = ({
   text,
   Icon,
   link,
+  transparent = false,
   className,
   ...props
 }: ButtonProps) => {
@@ -33,11 +35,21 @@ export const Button = ({
   );
 
   return link ? (
-    <a className={cn(styles.button, className)} {...props}>
+    <a
+      className={cn(styles.button, className, {
+        [styles.buttonTransparent]: transparent,
+      })}
+      {...props}
+    >
       {content}
     </a>
   ) : (
-    <button className={cn(styles.button, className)} {...props}>
+    <button
+      className={cn(styles.button, className, {
+        [styles.buttonTransparent]: transparent,
+      })}
+      {...props}
+    >
       {content}
     </button>
   );

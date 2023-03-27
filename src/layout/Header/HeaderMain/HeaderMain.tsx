@@ -1,61 +1,101 @@
+import { DetailedHTMLProps, HTMLAttributes } from 'react';
 import cn from 'classnames';
 
-import { ReactComponent as LogoIcon } from '../../icons/logo.svg';
-import { ReactComponent as CatalogIcon } from '../../icons/catalog.svg';
-import { ReactComponent as DownloadIcon } from '../../icons/download.svg';
-import { ReactComponent as MenuIcon } from '../../icons/menu.svg';
-import { ReactComponent as CloseIcon } from '../../icons/close.svg';
-import { Button, CallMe, Cart, Divider, Input } from 'components';
+import { ReactComponent as CatalogIcon } from 'assets/catalog.svg';
+import { ReactComponent as DownloadIcon } from 'assets/download.svg';
+import { ReactComponent as MenuIcon } from 'assets/menu.svg';
+import { ReactComponent as CloseIcon } from 'assets/close.svg';
+import { ReactComponent as SearchIcon } from 'assets/search.svg';
+import { Button, CallMe, Cart, Divider, Input, Logo } from 'components';
+import { Container } from '../../Container/Container';
 
-import styles from './HeaderMain.module.css';
+import styles from './HeaderMain.module.scss';
 import { useMediaQuery } from 'hooks';
 
-interface HeaderMainProps {
+interface HeaderMainProps
+  extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   switchMenu: () => void;
   menuOpen: boolean;
 }
 
-export const HeaderMain = ({ switchMenu, menuOpen }: HeaderMainProps) => {
-  const isWide = useMediaQuery('(min-width: 1320px)');
-  const isDesktop = useMediaQuery('(min-width: 1100px)');
+export const HeaderMain = ({
+  switchMenu,
+  menuOpen,
+  className,
+  ...props
+}: HeaderMainProps) => {
+  // const isXtraLarge = useMediaQuery('(min-width: 1321px)');
+  const isLarge = useMediaQuery('(max-width: 1320px)');
+  const isMedium = useMediaQuery('(max-width: 1100px)');
+  const isSmall = useMediaQuery('(max-width: 820px)');
+  const isXtraSmall = useMediaQuery('(max-width: 640px)');
 
   return (
-    <div className={styles.headerMain}>
-      {!isDesktop && (
-        <button className={styles.headerMenuBtn} onClick={switchMenu}>
-          <MenuIcon />
-        </button>
-      )}
+    <div className={cn(styles.headerMain, className)} {...props}>
+      <Container>
+        <div className={styles.headerMainWrapper}>
+          <Divider className={styles.headerMainDividerTop} />
 
-      <LogoIcon />
+          {isMedium && (
+            <button className={styles.headerMainMenuBtn} onClick={switchMenu}>
+              {menuOpen ? <CloseIcon /> : <MenuIcon />}
+            </button>
+          )}
 
-      <Button
-        className={styles.catalogBtn}
-        Icon={menuOpen ? CatalogIcon : CloseIcon}
-        text="Каталог"
-        link
-      />
+          <Logo className={styles.headerMainLogo} />
 
-      <Input className={styles.input} />
+          <Button
+            className={styles.headerMainCatalogBtn}
+            Icon={CatalogIcon}
+            text="Каталог"
+            transparent={isSmall}
+            link
+          />
 
-      {isDesktop && (
-        <CallMe className={styles.headerCallMe} withImage={isWide} />
-      )}
+          {isSmall && (
+            <Divider className={styles.headerMainDivider} angle="vertical" />
+          )}
 
-      {isWide && <Divider className={styles.divider} angle="vertical" />}
+          {isSmall ? (
+            <Button
+              className={styles.headerMainInput}
+              Icon={SearchIcon}
+              text="Поиск"
+              transparent
+              link
+            />
+          ) : (
+            <Input className={styles.headerMainInput} />
+          )}
 
-      {isDesktop && (
-        <Button
-          className={styles.priceBtn}
-          Icon={DownloadIcon}
-          text="Прайс-лист"
-          link
-        />
-      )}
+          {!isMedium && (
+            <CallMe className={styles.headerMainCallMe} withImage={!isLarge} />
+          )}
 
-      {isWide && <Divider className={styles.divider} angle="vertical" />}
+          {!isLarge && (
+            <Divider className={styles.headerMainDivider} angle="vertical" />
+          )}
 
-      <Cart className={styles.headerCart} withInfo={isWide || !isDesktop} />
+          {!isMedium && (
+            <Button
+              className={styles.headerMainPriceBtn}
+              Icon={DownloadIcon}
+              text="Прайс-лист"
+              link
+            />
+          )}
+
+          {!isLarge && (
+            <Divider className={styles.headerMainDivider} angle="vertical" />
+          )}
+
+          <Cart
+            className={styles.headerMainCart}
+            withInfo={(isSmall && !isXtraSmall) || !isLarge}
+          />
+        </div>
+      </Container>
+      <Divider className={styles.headerMainDividerBottom} />
     </div>
   );
 };

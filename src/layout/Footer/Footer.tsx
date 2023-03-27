@@ -1,16 +1,15 @@
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
 import cn from 'classnames';
 
-import { ReactComponent as LogoIcon } from '../icons/logo.svg';
-import { Button, CallMe, Contact, Input } from 'components';
-import { Container } from 'layout/Container';
-import { ReactComponent as DownloadIcon } from '../icons/download.svg';
-import { ReactComponent as WhatsAppIcon } from '../icons/whatsapp.svg';
-import { ReactComponent as TelegramIcon } from '../icons/telegram.svg';
-import visa from '../icons/visa.png';
-import mastercard from '../icons/mastercard.png';
+import { Button, CallMe, Contact, Input, Logo } from 'components';
+import { Container } from 'layout/Container/Container';
+import { ReactComponent as DownloadIcon } from 'assets/download.svg';
+import { ReactComponent as WhatsAppIcon } from 'assets/whatsapp.svg';
+import { ReactComponent as TelegramIcon } from 'assets/telegram.svg';
+import visa from 'assets/visa.png';
+import mastercard from 'assets/mastercard.png';
 
-import styles from './Footer.module.css';
+import styles from './Footer.module.scss';
 
 interface FooterProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
@@ -19,7 +18,8 @@ export const Footer = ({ className, ...props }: FooterProps) => (
   <footer className={cn(styles.footer, className)} {...props}>
     <Container>
       <div className={styles.footerWrapper}>
-        <LogoIcon className={styles.footerLogo} fill="#fff" />
+        <Logo className={styles.footerLogo} color="light" />
+
         <div className={styles.footerInfo}>
           <p className={styles.footerDescriprtion}>
             Компания «Султан» — снабжаем розничные магазины товарами
@@ -30,8 +30,9 @@ export const Footer = ({ className, ...props }: FooterProps) => (
           </div>
           <Input type="submit" className={styles.footerInput} />
         </div>
+
         <div className={styles.footerMenu}>
-          <div className={styles.footerTitle}>Меню сайта:</div>
+          <div className={styles.footerTitle}>Меню&nbsp;сайта:</div>
           <ul>
             <li className={styles.footerItem}>
               <a href="#">О компании</a>
@@ -47,6 +48,7 @@ export const Footer = ({ className, ...props }: FooterProps) => (
             </li>
           </ul>
         </div>
+
         <div className={styles.footerCategory}>
           <div className={styles.footerTitle}>Категории:</div>
           <ul>
@@ -67,20 +69,22 @@ export const Footer = ({ className, ...props }: FooterProps) => (
             </li>
           </ul>
         </div>
+
         <div className={styles.footerPrice}>
           <div className={styles.footerTitle}>Скачать прайс-лист:</div>
           <Button
-            className={styles.priceBtn}
+            className={styles.footerPriceBtn}
             Icon={DownloadIcon}
             text="Прайс-лист"
             link
           />
         </div>
+
         <div className={styles.footerMessengers}>
           <div className={styles.footerMessengersTitle}>
             Связь в мессенджерах:
           </div>
-          <div className={styles.footerMessengerLinks}>
+          <div className={styles.footerMessengersLinks}>
             <a href="#">
               <WhatsAppIcon />
             </a>

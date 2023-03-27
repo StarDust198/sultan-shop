@@ -1,0 +1,68 @@
+@import '../../styles/variables';
+
+.cart {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+
+  &Img {
+    position: relative;
+  }
+
+  &Badge {
+    position: absolute;
+    top: -10px;
+    right: -15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: content-box;
+    width: 22px;
+    height: 22px;
+
+    font-size: 14px;
+    font-weight: 700;
+    color: $white;
+
+    background: $orange;
+    border: 3px solid $white;
+    border-radius: 50%;
+  }
+
+  &Info {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  &Price {
+    display: block;
+
+    font-size: 14px;
+    font-weight: 600;
+    color: $black;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: $s) {
+  .cart {
+    svg {
+      width: 22px;
+      height: 16px;
+    }
+
+    &Badge {
+      top: -10px;
+      right: -10px;
+
+      width: 17px;
+      height: 17px;
+
+      font-size: 10px;
+      line-height: 1.2;
+    }
+  }
+}

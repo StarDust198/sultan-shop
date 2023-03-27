@@ -1,0 +1,49 @@
+@import '../../styles/variables';
+
+.button {
+  cursor: pointer;
+
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px 50px;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $white;
+  white-space: nowrap;
+
+  background: $orange;
+  border: none;
+  border-radius: 79px;
+
+  & .icon {
+    width: 15px;
+    height: 15px;
+  }
+
+  &Transparent {
+    gap: 6px;
+    color: unset;
+    background: transparent;
+
+    & .icon {
+      order: -1;
+
+      & path {
+        stroke: $gray-dark;
+      }
+    }
+  }
+}
+
+@media (max-width: $s) {
+  .button {
+    &Transparent {
+      padding: 16px;
+    }
+  }
+}

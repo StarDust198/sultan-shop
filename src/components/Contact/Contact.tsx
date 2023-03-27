@@ -6,7 +6,7 @@ import {
 } from 'react';
 import cn from 'classnames';
 
-import styles from './Contact.module.css';
+import styles from './Contact.module.scss';
 
 interface ContactProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
@@ -28,17 +28,17 @@ export const Contact = ({
 }: ContactProps) => {
   return (
     <div className={cn(styles.contact, className)} {...props}>
-      {Icon && <Icon className={styles.icon} />}
+      {Icon && <Icon className={styles.contactIcon} />}
 
       <div
-        className={cn(styles.text, {
-          [styles.white]: color === 'white',
+        className={cn(styles.contactText, {
+          [styles.contactWhite]: color === 'white',
         })}
       >
-        <span className={styles.bold}>{title}</span>
+        <span className={styles.contactBold}>{title}</span>
         {description}
         {subDescription && (
-          <span className={styles.subDescription}>{subDescription}</span>
+          <span className={styles.contactSubDescription}>{subDescription}</span>
         )}
       </div>
     </div>

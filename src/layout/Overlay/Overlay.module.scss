@@ -1,0 +1,10 @@
+@import '../../styles/variables';
+
+.overlay {
+  position: fixed;
+  z-index: 5;
+  inset: 0;
+
+  opacity: 0.5;
+  background: $black;
+}

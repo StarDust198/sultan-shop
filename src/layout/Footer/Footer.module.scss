@@ -1,0 +1,219 @@
+@import '../../styles/variables';
+
+.footer {
+  min-height: 500px;
+  padding-top: 72px;
+  padding-bottom: 116px;
+
+  line-height: 1.5;
+  color: $white;
+
+  background: $gray-dark;
+
+  &Wrapper {
+    display: grid;
+    grid-template-areas:
+      'logo menu category price contacts'
+      'info menu category price contacts'
+      'info menu category messengers contacts';
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: min-content min-content 1fr;
+    gap: 0 50px;
+    justify-content: space-between;
+  }
+
+  &Logo {
+    grid-area: logo;
+  }
+
+  &Info {
+    grid-area: info;
+    max-width: 320px;
+    margin-top: 15px;
+  }
+
+  &Input {
+    max-width: 290px;
+    margin-top: 14px;
+  }
+
+  &Menu {
+    grid-area: menu;
+  }
+
+  &Category {
+    grid-area: category;
+  }
+
+  &Price {
+    grid-area: price;
+  }
+
+  &Messengers {
+    grid-area: messengers;
+    margin-top: 20px;
+    font-size: 14px;
+
+    &Links {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+  }
+
+  &Contacts {
+    grid-area: contacts;
+
+    & > * {
+      margin-bottom: 25px;
+    }
+  }
+
+  &Subscribe {
+    margin-top: 45px;
+    font-size: 12px;
+  }
+
+  &Title {
+    margin-bottom: 25px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  &Item {
+    margin-top: 20px;
+    font-size: 14px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &Payments {
+    display: flex;
+    gap: 5px;
+    align-items: start;
+
+    &img {
+      object-fit: contain;
+    }
+  }
+}
+
+@media (max-width: $l) {
+  .footer {
+    &Wrapper {
+      grid-template-areas:
+        'logo menu category'
+        'info menu category'
+        'info price price'
+        'contacts contacts messengers';
+      grid-template-columns: repeat(3, auto);
+      justify-content: space-between;
+    }
+
+    &Info {
+      max-width: 280px;
+    }
+
+    &Price {
+      justify-self: start;
+      margin-top: 14px;
+
+      .footerTitle {
+        display: none;
+      }
+    }
+
+    &Contacts {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+
+    &Payments {
+      flex-direction: column;
+    }
+
+    &Messengers {
+      margin-top: 50px;
+    }
+  }
+}
+
+@media (max-width: $m) {
+  .footer {
+    padding: 30px;
+
+    &Wrapper {
+      grid-template-areas:
+        'logo price '
+        'info info'
+        'menu category '
+        'contacts messengers';
+      grid-template-columns: repeat(2, auto);
+      gap: 15px;
+      justify-content: unset;
+    }
+
+    &Info {
+      max-width: 400px;
+      font-size: 12px;
+    }
+
+    &Subscribe {
+      margin-top: 15px;
+    }
+
+    &Menu,
+    &Category {
+      margin-top: 15px;
+    }
+
+    &Price {
+      align-self: center;
+      margin-top: 0;
+    }
+
+    &Item {
+      font-size: 12px;
+    }
+
+    &Contacts {
+      flex-direction: column;
+      margin-top: unset;
+    }
+
+    &Messengers {
+      margin-top: 50px;
+    }
+
+    &Payments {
+      flex-direction: row;
+    }
+  }
+}
+
+@media (max-width: $s) {
+  .footer {
+    padding: 25px 0 0;
+
+    &Wrapper {
+      grid-template-areas:
+        'logo price price '
+        'info info info'
+        'menu category category '
+        'contacts contacts messengers';
+      grid-template-columns: auto 0 auto;
+      gap: 16px;
+    }
+
+    &Price {
+      &Btn {
+        height: 40px;
+        padding: 12px 5vw;
+        font-size: 12px;
+      }
+    }
+  }
+}
