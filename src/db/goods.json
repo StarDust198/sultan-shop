@@ -1,6 +1,6 @@
 [
   {
-    "picSrc": "./assests/goods/goods1.png",
+    "picSrc": "./assets/goods/goods1.png",
     "title": "AOS Ср-во для мытья посуды Апельсин+мята",
     "sizeType": "volume",
     "size": "450 мл",
@@ -12,7 +12,7 @@
     "groups": ["hand", "face"]
   },
   {
-    "picSrc": "./assests/goods/goods2.png",
+    "picSrc": "./assets/goods/goods2.png",
     "title": "AOS средство для мытья посуды Crystal",
     "sizeType": "volume",
     "size": "450 мл",
@@ -24,7 +24,7 @@
     "groups": ["hand", "face"]
   },
   {
-    "picSrc": "./assests/goods/goods3.png",
+    "picSrc": "./assets/goods/goods3.png",
     "title": "AOS средство для мытья посуды Crystal",
     "sizeType": "weight",
     "size": "15X28.8 г",
@@ -36,7 +36,7 @@
     "groups": ["hand", "face"]
   },
   {
-    "picSrc": "./assests/goods/goods4.png",
+    "picSrc": "./assets/goods/goods4.png",
     "title": "BIMAX Порошок стиральный Автомат 100 пятен COMPACT",
     "sizeType": "weight",
     "size": "1500 г",
@@ -48,7 +48,7 @@
     "groups": ["hand", "face"]
   },
   {
-    "picSrc": "./assests/goods/goods5.png",
+    "picSrc": "./assets/goods/goods5.png",
     "title": "BioMio BIO-SOAP Экологичное туалетное мыло. Литсея и бергамот",
     "sizeType": "weight",
     "size": "90 г",
@@ -59,7 +59,8 @@
     "price": 48.76,
     "groups": ["hand", "face"]
   },
-    "picSrc": "./assests/goods/goods1.png",
+  {
+    "picSrc": "./assets/goods/goods1.png",
     "title": "AOS Ср-во для мытья посуды Апельсин+мята",
     "sizeType": "volume",
     "size": "450 мл",
@@ -71,7 +72,7 @@
     "groups": ["hand", "face"]
   },
   {
-    "picSrc": "./assests/goods/goods2.png",
+    "picSrc": "./assets/goods/goods2.png",
     "title": "AOS средство для мытья посуды Crystal",
     "sizeType": "volume",
     "size": "450 мл",
@@ -83,7 +84,7 @@
     "groups": ["hand", "face"]
   },
   {
-    "picSrc": "./assests/goods/goods3.png",
+    "picSrc": "./assets/goods/goods3.png",
     "title": "AOS средство для мытья посуды Crystal",
     "sizeType": "weight",
     "size": "15X28.8 г",
@@ -95,7 +96,7 @@
     "groups": ["hand", "face"]
   },
   {
-    "picSrc": "./assests/goods/goods4.png",
+    "picSrc": "./assets/goods/goods4.png",
     "title": "BIMAX Порошок стиральный Автомат 100 пятен COMPACT",
     "sizeType": "weight",
     "size": "1500 г",
@@ -107,7 +108,7 @@
     "groups": ["hand", "face"]
   },
   {
-    "picSrc": "./assests/goods/goods5.png",
+    "picSrc": "./assets/goods/goods5.png",
     "title": "BioMio BIO-SOAP Экологичное туалетное мыло. Литсея и бергамот",
     "sizeType": "weight",
     "size": "90 г",
@@ -118,7 +119,8 @@
     "price": 48.76,
     "groups": ["hand", "face"]
   },
-    "picSrc": "./assests/goods/goods1.png",
+  {
+    "picSrc": "./assets/goods/goods1.png",
     "title": "AOS Ср-во для мытья посуды Апельсин+мята",
     "sizeType": "volume",
     "size": "450 мл",
@@ -130,7 +132,7 @@
     "groups": ["hand", "face"]
   },
   {
-    "picSrc": "./assests/goods/goods2.png",
+    "picSrc": "./assets/goods/goods2.png",
     "title": "AOS средство для мытья посуды Crystal",
     "sizeType": "volume",
     "size": "450 мл",
@@ -142,7 +144,7 @@
     "groups": ["hand", "face"]
   },
   {
-    "picSrc": "./assests/goods/goods3.png",
+    "picSrc": "./assets/goods/goods3.png",
     "title": "AOS средство для мытья посуды Crystal",
     "sizeType": "weight",
     "size": "15X28.8 г",
@@ -154,7 +156,7 @@
     "groups": ["hand", "face"]
   },
   {
-    "picSrc": "./assests/goods/goods4.png",
+    "picSrc": "./assets/goods/goods4.png",
     "title": "BIMAX Порошок стиральный Автомат 100 пятен COMPACT",
     "sizeType": "weight",
     "size": "1500 г",
@@ -166,7 +168,7 @@
     "groups": ["hand", "face"]
   },
   {
-    "picSrc": "./assests/goods/goods5.png",
+    "picSrc": "./assets/goods/goods5.png",
     "title": "BioMio BIO-SOAP Экологичное туалетное мыло. Литсея и бергамот",
     "sizeType": "weight",
     "size": "90 г",
@@ -177,7 +179,8 @@
     "price": 48.76,
     "groups": ["hand", "face"]
   },
-    "picSrc": "./assests/goods/goods1.png",
+  {
+    "picSrc": "./assets/goods/goods1.png",
     "title": "AOS Ср-во для мытья посуды Апельсин+мята",
     "sizeType": "volume",
     "size": "450 мл",
@@ -189,7 +192,7 @@
     "groups": ["hand", "face"]
   },
   {
-    "picSrc": "./assests/goods/goods2.png",
+    "picSrc": "./assets/goods/goods2.png",
     "title": "AOS средство для мытья посуды Crystal",
     "sizeType": "volume",
     "size": "450 мл",
@@ -201,7 +204,7 @@
     "groups": ["hand", "face"]
   },
   {
-    "picSrc": "./assests/goods/goods3.png",
+    "picSrc": "./assets/goods/goods3.png",
     "title": "AOS средство для мытья посуды Crystal",
     "sizeType": "weight",
     "size": "15X28.8 г",
@@ -213,7 +216,7 @@
     "groups": ["hand", "face"]
   },
   {
-    "picSrc": "./assests/goods/goods4.png",
+    "picSrc": "./assets/goods/goods4.png",
     "title": "BIMAX Порошок стиральный Автомат 100 пятен COMPACT",
     "sizeType": "weight",
     "size": "1500 г",
@@ -225,7 +228,7 @@
     "groups": ["hand", "face"]
   },
   {
-    "picSrc": "./assests/goods/goods5.png",
+    "picSrc": "./assets/goods/goods5.png",
     "title": "BioMio BIO-SOAP Экологичное туалетное мыло. Литсея и бергамот",
     "sizeType": "weight",
     "size": "90 г",

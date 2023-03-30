@@ -20,7 +20,7 @@ export const Tabs = ({}: TabsProps) => {
     const ro = new ResizeObserver((entries) => {
       if (elem) {
         for (let entry of entries) {
-          console.log(elem.scrollWidth, elem.offsetWidth);
+          // console.log(elem.scrollWidth, elem.offsetWidth);
           if (elem.scrollWidth > elem.offsetWidth + (showArrows ? 100 : 0)) {
             setShowArrows(true);
           } else {

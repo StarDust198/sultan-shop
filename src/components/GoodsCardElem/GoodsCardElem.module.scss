@@ -1,0 +1,19 @@
+@import '../../styles/variables';
+
+.goodsCardElem {
+  margin-top: 5px;
+  font-size: 14px;
+
+  &Title {
+    font-weight: 300;
+    margin-right: 5px;
+    &::after {
+      content: ':';
+    }
+  }
+
+  &Value {
+    font-weight: 500;
+    color: $black;
+  }
+}

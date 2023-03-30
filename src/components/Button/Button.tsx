@@ -13,6 +13,7 @@ interface ButtonProps
     DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>,
     'ref'
   > {
+  size?: 'sm' | 'md';
   link?: boolean;
   text?: string;
   Icon?: FunctionComponent<SVGProps<SVGSVGElement>> | null;
@@ -20,6 +21,7 @@ interface ButtonProps
 }
 
 export const Button = ({
+  size = 'md',
   text,
   Icon,
   link,
@@ -47,6 +49,7 @@ export const Button = ({
     <button
       className={cn(styles.button, className, {
         [styles.buttonTransparent]: transparent,
+        [styles.buttonSmall]: size === 'sm',
       })}
       {...props}
     >

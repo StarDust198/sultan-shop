@@ -1,8 +1,9 @@
-import { useState, MouseEvent, Fragment } from 'react';
+import { useState, Fragment } from 'react';
 import cn from 'classnames';
 
-import styles from './Sort.module.scss';
 import { ReactComponent as SortIcon } from 'assets/sort.svg';
+
+import styles from './Sort.module.scss';
 
 interface SortProps {
   options?: string[];
