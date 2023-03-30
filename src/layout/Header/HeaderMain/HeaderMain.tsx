@@ -65,7 +65,7 @@ export const HeaderMain = ({
               link
             />
           ) : (
-            <Input className={styles.headerMainInput} />
+            <Input className={styles.headerMainInput} transparent={isSmall} />
           )}
 
           {!isMedium && (

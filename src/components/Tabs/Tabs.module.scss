@@ -1,0 +1,38 @@
+@import '../../styles/variables';
+
+.tabs {
+  display: flex;
+  position: relative;
+  gap: 11px;
+  max-width: 90vw;
+
+  &Wrapper {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    gap: 11px;
+  }
+
+  &Arrow {
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    &Left {
+      left: 0;
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+    &Right {
+      right: 0;
+    }
+    svg {
+      fill: $gray;
+    }
+    &Active {
+      svg {
+        fill: $gray-dark;
+      }
+    }
+  }
+}

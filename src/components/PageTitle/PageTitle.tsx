@@ -1,7 +1,9 @@
 import styles from './PageTitle.module.scss';
 
-interface PageTitleProps {}
+interface PageTitleProps {
+  title: string;
+}
 
-export const PageTitle = ({}: PageTitleProps) => (
-  <div className={styles.pageTitle}>PageTitle Component</div>
+export const PageTitle = ({ title }: PageTitleProps) => (
+  <h1 className={styles.pageTitle}>{title}</h1>
 );

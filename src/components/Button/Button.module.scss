@@ -20,18 +20,22 @@
   border: none;
   border-radius: 79px;
 
-  & .icon {
+  & svg {
     width: 15px;
     height: 15px;
   }
 
   &Transparent {
-    gap: 6px;
+    gap: 10px;
+    font-size: 16px;
+    line-height: 1;
     color: unset;
     background: transparent;
 
-    & .icon {
+    & svg {
       order: -1;
+      width: 20px;
+      height: 20px;
 
       & path {
         stroke: $gray-dark;
@@ -43,7 +47,14 @@
 @media (max-width: $s) {
   .button {
     &Transparent {
+      font-size: 14px;
+      gap: 6px;
       padding: 16px;
+
+      & svg {
+        width: 15px;
+        height: 15px;
+      }
     }
   }
 }

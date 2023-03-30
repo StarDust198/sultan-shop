@@ -30,7 +30,7 @@ export const Button = ({
   const content = (
     <>
       {text && <span>{text}</span>}
-      {Icon && <Icon className={styles.icon} />}
+      {Icon && <Icon className={styles.buttonIcon} />}
     </>
   );
 

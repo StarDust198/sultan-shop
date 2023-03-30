@@ -7,15 +7,14 @@
     "default": {
       "customTemplates": {
         "component": "templates/default/TemplateName.tsx",
-        "style": "templates/default/TemplateName.module.scss",
-        "index": "templates/default/index.ts"
+        "style": "templates/default/TemplateName.module.scss"
       },
       "path": "src/components",
       "withLazy": false,
       "withStory": false,
       "withStyle": true,
       "withTest": false,
-      "withIndex": true
+      "withIndex": false
     }
   },
   "usesStyledComponents": false

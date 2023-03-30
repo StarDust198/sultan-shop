@@ -92,7 +92,7 @@
   &Payments {
     display: flex;
     gap: 5px;
-    align-items: start;
+    align-items: flex-start;
 
     &img {
       object-fit: contain;

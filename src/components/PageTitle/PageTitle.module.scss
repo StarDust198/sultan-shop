@@ -1,1 +1,17 @@
-.pageTitle {}
+@import '../../styles/variables';
+
+.pageTitle {
+  margin-top: 50px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 120%;
+  color: $black;
+}
+
+@media (max-width: $s) {
+  .pageTitle {
+    margin-top: 25px;
+    font-size: 20px;
+  }
+}

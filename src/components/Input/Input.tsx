@@ -9,10 +9,21 @@ import styles from './Input.module.scss';
 interface InputProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   type?: 'search' | 'submit';
+  transparent?: boolean;
 }
 
-export const Input = ({ type = 'search', className, ...props }: InputProps) => (
-  <div className={cn(styles.input, className)} {...props}>
+export const Input = ({
+  type = 'search',
+  transparent = false,
+  className,
+  ...props
+}: InputProps) => (
+  <div
+    className={cn(styles.input, className, {
+      [styles.inputTransparent]: transparent,
+    })}
+    {...props}
+  >
     <input
       className={styles.inputField}
       type="text"
