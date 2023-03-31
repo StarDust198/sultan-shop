@@ -22,13 +22,16 @@
     font-weight: 300;
     border-radius: 1000px;
     border: none;
-    padding-top: 4px;
+    padding-block: 4px;
     text-align: center;
     &::placeholder {
       opacity: 0.6;
     }
     &:first-of-type {
       margin-right: 10px;
+    }
+    &:focus {
+      outline: 1px solid $orange;
     }
   }
 

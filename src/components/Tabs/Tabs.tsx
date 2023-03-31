@@ -1,13 +1,20 @@
-import { useEffect, useRef, useState } from 'react';
+import {
+  DetailedHTMLProps,
+  HTMLAttributes,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 import cn from 'classnames';
 
 import { TabCard } from 'components/TabCard/TabCard';
 import styles from './Tabs.module.scss';
 import { ReactComponent as ArrowIcon } from 'assets/arrow.svg';
 
-interface TabsProps {}
+interface TabsProps
+  extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
 
-export const Tabs = ({}: TabsProps) => {
+export const Tabs = ({ className, ...props }: TabsProps) => {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const [inactiveArrow, setInactiveArrow] = useState<'left' | 'right' | null>(
     'left'
@@ -63,7 +70,7 @@ export const Tabs = ({}: TabsProps) => {
   };
 
   return (
-    <div className={styles.tabs}>
+    <div className={cn(styles.tabs, className)} {...props}>
       {showArrows && (
         <TabCard
           className={cn(styles.tabsArrow, styles.tabsArrowLeft, {
