@@ -1,8 +1,18 @@
 .layout {
   display: grid;
   min-height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+
+  &Header {
+    grid-area: header;
+  }
 
   &Footer {
+    grid-area: footer;
     margin-top: 100px;
     align-self: end;
   }

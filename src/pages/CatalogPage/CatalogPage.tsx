@@ -1,11 +1,10 @@
 import {
-  CategoryLinks,
   FilterPanel,
-  GoodsCard,
+  GoodsList,
   PageRoute,
   PageTitle,
   Sort,
-  Tabs,
+  TabList,
 } from 'components';
 
 import { Layout } from 'layout/Layout';
@@ -31,16 +30,11 @@ export const CatalogPage = ({}: CatalogPageProps) => {
           title="Косметика и гигиена"
         />
         <Sort className={styles.catalogPageSort} />
-        <Tabs className={styles.catalogPageTabs} />
-        <div className={styles.catalogPageMenu}>
-          <FilterPanel />
-          <CategoryLinks />
-        </div>
-        <div className={styles.catalogPageCardsList}>
-          {cards.map((card) => (
-            <GoodsCard {...card} />
-          ))}
-        </div>
+        <TabList className={styles.catalogPageTabs} mode="cards" />
+        <FilterPanel className={styles.catalogPageFilters} />
+
+        <TabList className={styles.catalogPageLinks} mode="links" />
+        <GoodsList className={styles.catalogPageCardList} cards={cards} />
       </div>
     </Layout>
   );

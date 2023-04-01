@@ -13,7 +13,7 @@ interface ButtonProps
     DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>,
     'ref'
   > {
-  size?: 'sm' | 'md';
+  size?: 'sm' | 'md' | 'round';
   link?: boolean;
   text?: string;
   Icon?: FunctionComponent<SVGProps<SVGSVGElement>> | null;
@@ -36,23 +36,18 @@ export const Button = ({
     </>
   );
 
+  const clazz = cn(styles.button, className, {
+    [styles.buttonTransparent]: transparent,
+    [styles.buttonSmall]: size === 'sm',
+    [styles.buttonRound]: size === 'round',
+  });
+
   return link ? (
-    <a
-      className={cn(styles.button, className, {
-        [styles.buttonTransparent]: transparent,
-      })}
-      {...props}
-    >
+    <a className={clazz} {...props}>
       {content}
     </a>
   ) : (
-    <button
-      className={cn(styles.button, className, {
-        [styles.buttonTransparent]: transparent,
-        [styles.buttonSmall]: size === 'sm',
-      })}
-      {...props}
-    >
+    <button className={clazz} {...props}>
       {content}
     </button>
   );

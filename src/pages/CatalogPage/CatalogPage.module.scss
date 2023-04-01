@@ -3,35 +3,70 @@
 .catalogPage {
   display: grid;
   grid-template-columns: 238px 1fr auto;
-  gap: 30px 60px;
+  gap: 20px 30px;
+  grid-template-areas:
+    'route route route'
+    'title title sort'
+    'tabs tabs tabs'
+    'filters cardList cardList'
+    'buttons cardList cardList'
+    'links cardList cardList';
+  grid-template-rows: repeat(5, min-content) 1fr;
 
   &Route {
-    grid-column: 1/-1;
+    grid-area: route;
+    justify-self: start;
   }
 
   &Title {
-    grid-column: 1/3;
+    justify-self: start;
+    grid-area: title;
   }
 
   &Sort {
-    grid-column: -2;
+    grid-area: sort;
     align-self: end;
     justify-content: end;
   }
 
   &Tabs {
-    grid-column: 1/-1;
+    margin-top: 5px;
+    grid-area: tabs;
   }
 
-  &CardsList {
-    justify-content: end;
-    grid-column: -3/-1;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-    gap: 21px;
+  &CardList {
+    margin-top: 10px;
+    grid-area: cardList;
   }
 
-  &Menu {
-    grid-column: 1/2;
+  &Filters {
+    margin-top: 30px;
+    grid-area: filters;
+    align-self: start;
+  }
+
+  &Links {
+    margin-top: 20px;
+    grid-area: links;
+  }
+}
+
+@media (max-width: $l) {
+  .catalogPage {
+    grid-template-columns: 240px 1fr;
+    grid-template-areas:
+      'route route'
+      'title title'
+      'filters links'
+      'sort sort'
+      'cardList cardList';
+    // justify-items: center;
+
+    & &Links {
+      display: none;
+    }
+    & &Tabs {
+      display: none;
+    }
   }
 }

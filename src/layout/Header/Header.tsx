@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { DetailedHTMLProps, HTMLAttributes, useState } from 'react';
 import cn from 'classnames';
 
 import { HeaderMain } from './HeaderMain/HeaderMain';
@@ -7,9 +7,10 @@ import { Overlay } from '../Overlay/Overlay';
 
 import styles from './Header.module.scss';
 
-interface HeaderProps {}
+interface HeaderProps
+  extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
 
-export const Header = ({}: HeaderProps) => {
+export const Header = ({ className, ...props }: HeaderProps) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const switchMenu = () => {
@@ -18,7 +19,7 @@ export const Header = ({}: HeaderProps) => {
 
   return (
     <>
-      <header className={styles.header}>
+      <header className={cn(styles.header, className)} {...props}>
         <Menu
           className={cn(styles.headerMenu, {
             [styles.headerMenuOpen]: menuOpen,

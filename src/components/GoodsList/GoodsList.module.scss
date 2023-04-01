@@ -1,0 +1,8 @@
+@import '../../styles/variables';
+
+.goodsList {
+  display: grid;
+  justify-content: end;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 21px;
+}

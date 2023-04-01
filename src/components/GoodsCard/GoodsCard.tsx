@@ -18,16 +18,19 @@ export const GoodsCard = ({
   brand,
   price,
 }: GoodsCardProps) => {
-  console.log(sizeType);
+  const titleArr = title.split(' ');
+  const titleWoFirstWord = titleArr.slice(1).join(' ');
 
   return (
-    <div className={styles.goodsCard}>
+    <li className={styles.goodsCard}>
       <img className={styles.goodsCardImage} src={picSrc} alt={title} />
       <div className={styles.goodsCardSize}>
         {sizeType === 'weight' ? <WeightIcon /> : <VolumeIcon />}
         <span>{size}</span>
       </div>
-      <div className={styles.goodsCardTitle}>{title}</div>
+      <div className={styles.goodsCardTitle}>
+        <b>{titleArr[0]}</b> {titleWoFirstWord}
+      </div>
 
       <div className={styles.goodsCardElems}>
         <GoodsCardElem title="Штрихкод" value={code} />
@@ -44,6 +47,6 @@ export const GoodsCard = ({
           size="sm"
         ></Button>
       </div>
-    </div>
+    </li>
   );
 };

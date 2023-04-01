@@ -1,0 +1,16 @@
+@import '../../styles/variables';
+
+.tabList {
+  display: flex;
+  flex-wrap: wrap;
+
+  &Links {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &Cards {
+    gap: 10px;
+    justify-content: start;
+  }
+}

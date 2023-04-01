@@ -19,6 +19,7 @@
       border: 0.5px solid $gray-dark;
       border-radius: 1px;
     }
+
     &:checked + label {
       &::before {
         content: '';
@@ -31,6 +32,7 @@
         transform: rotate(-50deg);
         border-radius: 5px;
       }
+
       &::after {
         content: '';
         position: absolute;

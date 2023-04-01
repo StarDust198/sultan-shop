@@ -1,8 +1,13 @@
 @import '../../styles/variables';
 
-.goodsCardElem {
+.goodsCardItem {
   margin-top: 5px;
   font-size: 14px;
+
+  // width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   &Title {
     font-weight: 300;

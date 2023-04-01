@@ -5,9 +5,17 @@ import { FieldFilterItem, Input } from 'components';
 import { ReactComponent as SortIcon } from 'assets/sort.svg';
 
 import styles from './FieldFilter.module.scss';
-import { set } from 'immer/dist/internal';
 
 interface FieldFilterProps {}
+
+const fieldFilterDB = [
+  { title: 'Grifon', quantity: 56 },
+  { title: 'Boyscout', quantity: 66 },
+  { title: 'Paclan', quantity: 66 },
+  { title: 'Булгари Грин', quantity: 21 },
+  { title: 'Просто Грин', quantity: 121 },
+  { title: 'Абракадабра', quantity: 281 },
+];
 
 export const FieldFilter = ({}: FieldFilterProps) => {
   const [expanded, setExpanded] = useState(false);
@@ -17,10 +25,15 @@ export const FieldFilter = ({}: FieldFilterProps) => {
       <h5 className={styles.fieldFilterTitle}>Производитель</h5>
       <Input className={styles.fieldFilterSearch} type="search" />
       <div className={styles.fieldFilterItems}>
-        <FieldFilterItem title="Grifon" quantity={56} />
-        <FieldFilterItem title="Boyscout" quantity={66} />
-        <FieldFilterItem title="Paclan" quantity={166} />
-        <FieldFilterItem title="Булгари Грин" quantity={21} />
+        {fieldFilterDB.map((ffItem, i) =>
+          i < 4 || expanded ? (
+            <FieldFilterItem
+              key={ffItem.title}
+              title={ffItem.title}
+              quantity={ffItem.quantity}
+            />
+          ) : null
+        )}
       </div>
       <div
         onClick={() => setExpanded((expanded) => !expanded)}
