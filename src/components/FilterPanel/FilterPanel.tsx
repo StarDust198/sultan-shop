@@ -2,7 +2,7 @@ import { DetailedHTMLProps, HTMLAttributes, useState } from 'react';
 import cn from 'classnames';
 
 import { useAppDispatch } from 'app/hooks';
-import { setFilter } from 'features/products/productsSlice';
+import { resetFilter, setFilter } from 'features/products/productsSlice';
 import { Button, BrandFilter, PriceFilter } from 'components';
 import { ReactComponent as TrashIcon } from 'assets/trash.svg';
 import { ReactComponent as ArrowIcon } from 'assets/arrow.svg';
@@ -28,6 +28,13 @@ export const FilterPanel = ({ className, ...props }: FilterPanelProps) => {
         brands: choosedBrands,
       })
     );
+  };
+
+  const resetFilters = () => {
+    setPriceLow('');
+    setPriceHigh('');
+    setChoosedBrands([]);
+    dispatch(resetFilter());
   };
 
   return (
@@ -62,7 +69,7 @@ export const FilterPanel = ({ className, ...props }: FilterPanelProps) => {
 
       <div className={styles.filterPanelButtons}>
         <Button text="Показать" onClick={setAllFilters} />
-        <Button size="round" Icon={TrashIcon} />
+        <Button size="round" Icon={TrashIcon} onClick={resetFilters} />
       </div>
     </div>
   );

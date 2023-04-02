@@ -57,7 +57,7 @@ export const BrandFilter = ({
               title={brand.title}
               quantity={brand.quantity}
               onChange={(e) => setBrand(brand.title, e.currentTarget.checked)}
-              defaultChecked={choosedBrands.includes(brand.title)}
+              checked={choosedBrands.includes(brand.title)}
             />
           ) : null
         )}

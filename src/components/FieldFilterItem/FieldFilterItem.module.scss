@@ -13,9 +13,12 @@
 
     & + label {
       position: relative;
+
       display: block;
-      height: 10px;
+
       width: 10px;
+      height: 10px;
+
       border: 0.5px solid $gray-dark;
       border-radius: 1px;
     }
@@ -23,25 +26,31 @@
     &:checked + label {
       &::before {
         content: '';
+
         position: absolute;
-        height: 2px;
-        width: 12px;
-        background-color: $orange;
         top: 20%;
         right: -40%;
         transform: rotate(-50deg);
+
+        width: 12px;
+        height: 2px;
+
+        background-color: $orange;
         border-radius: 5px;
       }
 
       &::after {
         content: '';
+
         position: absolute;
-        height: 2px;
-        width: 8px;
-        background-color: $orange;
         top: 35%;
         right: 40%;
         transform: rotate(50deg);
+
+        width: 8px;
+        height: 2px;
+
+        background-color: $orange;
         border-radius: 5px;
       }
     }

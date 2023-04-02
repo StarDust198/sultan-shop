@@ -1,18 +1,21 @@
 @import '../../styles/variables';
 
 .brandFilter {
-  margin-top: 30px;
   display: flex;
   flex-direction: column;
   gap: 15px;
+  margin-top: 30px;
 
   &Expand {
+    cursor: pointer;
+
     display: flex;
     gap: 5px;
     align-items: center;
+
     font-size: 12px;
     font-weight: 500;
-    cursor: pointer;
+
     &.expanded svg {
       transform: rotate(180deg);
     }

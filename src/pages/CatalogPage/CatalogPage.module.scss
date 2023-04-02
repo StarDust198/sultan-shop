@@ -2,8 +2,6 @@
 
 .catalogPage {
   display: grid;
-  grid-template-columns: 238px 1fr auto;
-  gap: 20px 50px;
   grid-template-areas:
     'route route route'
     'title title sort'
@@ -12,7 +10,9 @@
     'links cardList cardList'
     'links pagination pagination'
     'links description description';
+  grid-template-columns: 238px 1fr auto;
   grid-template-rows: repeat(4, min-content) 1fr;
+  gap: 20px 50px;
 
   &Route {
     grid-area: route;
@@ -20,8 +20,8 @@
   }
 
   &Title {
-    justify-self: start;
     grid-area: title;
+    justify-self: start;
   }
 
   &Sort {
@@ -31,24 +31,24 @@
   }
 
   &Tabs {
-    margin-top: 5px;
     grid-area: tabs;
+    margin-top: 5px;
   }
 
   &CardList {
-    margin-top: 10px;
     grid-area: cardList;
+    margin-top: 10px;
   }
 
   &Filters {
-    margin-top: 30px;
     grid-area: filters;
     align-self: start;
+    margin-top: 30px;
   }
 
   &Links {
-    margin-top: 20px;
     grid-area: links;
+    margin-top: 20px;
   }
 
   &Pagination {
@@ -58,15 +58,14 @@
 
   &Description {
     grid-area: description;
-    margin-top: 68px;
     max-width: 90%;
+    margin-top: 68px;
     font-size: 14px;
   }
 }
 
 @media (max-width: $l) {
   .catalogPage {
-    grid-template-columns: 1fr 300px 1fr;
     grid-template-areas:
       'route route route'
       'title title title'
@@ -76,6 +75,7 @@
       'cardList cardList cardList'
       'pagination pagination pagination'
       'description description description';
+    grid-template-columns: 1fr 300px 1fr;
 
     & &Links {
       display: none;
@@ -102,6 +102,7 @@
     & &Links {
       display: flex;
     }
+
     & &Tabs {
       display: none;
     }
@@ -110,8 +111,6 @@
 
 @media (max-width: $s) {
   .catalogPage {
-    grid-template-columns: 1fr $min-card-width 1fr;
-    column-gap: 0;
     grid-template-areas:
       '. route .'
       '. title .'
@@ -121,6 +120,8 @@
       'cardList cardList cardList'
       'pagination pagination pagination'
       'description description description';
+    grid-template-columns: 1fr $min-card-width 1fr;
+    column-gap: 0;
 
     &Pagination {
       margin-top: 45px;

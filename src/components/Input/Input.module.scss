@@ -2,9 +2,7 @@
 
 .input {
   position: relative;
-
   padding: 17px 20px;
-
   background: $gray;
   border-radius: 36px;
 
@@ -20,11 +18,12 @@
   }
 
   &Button {
+    cursor: pointer;
+
     position: absolute;
     top: 50%;
     right: 8px;
     transform: translateY(-50%);
-    cursor: pointer;
 
     padding: 10px;
 

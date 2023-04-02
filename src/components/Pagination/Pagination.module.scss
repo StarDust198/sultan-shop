@@ -7,12 +7,15 @@
   justify-content: center;
 
   &Btn {
+    cursor: pointer;
+
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+
     background: transparent;
     border: none;
-    cursor: pointer;
+
     svg {
       fill: $orange;
     }
@@ -28,19 +31,22 @@
   }
 
   &Item {
+    position: relative;
     font-size: 14px;
     font-weight: 500;
-    position: relative;
 
     &.active::before {
       content: '';
-      width: 35px;
-      height: 35px;
-      background: $orange-gradient;
+
       position: absolute;
-      border-radius: 50%;
       top: -8px;
       left: -15px;
+
+      width: 35px;
+      height: 35px;
+
+      background: $orange-gradient;
+      border-radius: 50%;
     }
   }
 }

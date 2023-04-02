@@ -27,9 +27,11 @@
 
   &Transparent {
     gap: 10px;
+
     font-size: 16px;
     line-height: 1;
     color: unset;
+
     background: transparent;
 
     & svg {
@@ -44,9 +46,9 @@
   }
 
   &Small {
+    padding: 16px 25px;
     font-size: 10px;
     letter-spacing: 0.15em;
-    padding: 16px 25px;
   }
 
   &Round {
@@ -62,9 +64,9 @@
 @media (max-width: $s) {
   .button {
     &Transparent {
-      font-size: 14px;
       gap: 6px;
       padding: 16px;
+      font-size: 14px;
 
       & svg {
         width: 15px;

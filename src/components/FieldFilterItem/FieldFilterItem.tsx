@@ -1,11 +1,11 @@
-import { DetailedHTMLProps, HTMLAttributes } from 'react';
+import { DetailedHTMLProps, InputHTMLAttributes } from 'react';
 import cn from 'classnames';
 
 import styles from './FieldFilterItem.module.scss';
 
 interface FieldFilterItemProps
   extends DetailedHTMLProps<
-    HTMLAttributes<HTMLInputElement>,
+    InputHTMLAttributes<HTMLInputElement>,
     HTMLInputElement
   > {
   title: string;
@@ -16,6 +16,7 @@ export const FieldFilterItem = ({
   title,
   quantity,
   className,
+  checked,
   ...props
 }: FieldFilterItemProps) => {
   return (
@@ -25,6 +26,7 @@ export const FieldFilterItem = ({
         type="checkbox"
         name={`${title}Checkbox`}
         id={`${title}Checkbox`}
+        checked={checked}
         {...props}
       />
       <label htmlFor={`${title}Checkbox`}></label>

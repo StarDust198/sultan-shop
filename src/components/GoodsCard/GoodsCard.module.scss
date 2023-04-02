@@ -1,39 +1,47 @@
 @import '../../styles/variables';
 
 .goodsCard {
-  background: $white;
-  box-shadow: 0px 14px 39px -11px $gray;
-  border-radius: 10px;
-  padding: 42px 22px 29px;
   max-width: 420px;
+  padding: 42px 22px 29px;
+
+  background: $white;
+  border-radius: 10px;
+  box-shadow: 0 14px 39px -11px $gray;
 
   &Image {
     display: block;
+
     max-width: 80%;
-    margin: 0 auto;
     height: 194px;
+    margin: 0 auto;
+
     object-fit: contain;
   }
 
   &Size {
     display: flex;
-    font-size: 12px;
-    color: $gray-dark;
-    margin-top: 4px;
     gap: 8px;
     align-items: center;
+
+    margin-top: 4px;
+
+    font-size: 12px;
+    color: $gray-dark;
+
     svg {
       fill: $gray;
     }
   }
 
   &Title {
+    max-width: 282px;
+    max-height: 63px;
+    margin-top: 10px;
+
     font-weight: 500;
     line-height: 1.3;
     color: $black;
-    margin-top: 10px;
-    max-width: 282px;
-    max-height: 63px;
+
     b {
       font-weight: 700;
     }
@@ -44,16 +52,16 @@
   }
 
   &Footer {
-    margin-top: 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 5px;
   }
 
   &Price {
-    color: $black;
     font-weight: 800;
     line-height: 1.3;
+    color: $black;
 
     &::after {
       content: ' ₸';
@@ -62,6 +70,7 @@
 
   &CartBtn {
     text-transform: uppercase;
+
     svg {
       fill: $white;
     }
