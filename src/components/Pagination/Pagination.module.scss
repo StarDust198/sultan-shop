@@ -1,4 +1,46 @@
 @import '../../styles/variables';
 
 .pagination {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+  justify-content: center;
+
+  &Btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    svg {
+      fill: $orange;
+    }
+  }
+
+  &Prev {
+    transform: rotate(180deg);
+  }
+
+  &List {
+    display: flex;
+    gap: 22px;
+  }
+
+  &Item {
+    font-size: 14px;
+    font-weight: 500;
+    position: relative;
+
+    &.active::before {
+      content: '';
+      width: 35px;
+      height: 35px;
+      background: $orange-gradient;
+      position: absolute;
+      border-radius: 50%;
+      top: -8px;
+      left: -15px;
+    }
+  }
 }

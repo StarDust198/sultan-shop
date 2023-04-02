@@ -52,6 +52,11 @@
   &Round {
     padding: 20px;
   }
+
+  &XsRound {
+    padding: 8px;
+    background: $orange-gradient;
+  }
 }
 
 @media (max-width: $s) {

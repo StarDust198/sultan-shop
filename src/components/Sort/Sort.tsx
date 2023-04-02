@@ -4,32 +4,34 @@ import cn from 'classnames';
 import { ReactComponent as SortIcon } from 'assets/sort.svg';
 
 import styles from './Sort.module.scss';
+import { SortDirection } from 'interfaces';
 
 interface SortProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLFormElement>, HTMLFormElement> {
-  options?: string[];
+  options: string[];
+  option: number;
+  setOption: (num: number) => void;
+  direction: SortDirection;
+  switchDirection: () => void;
 }
 
 export const Sort = ({
-  options = ['Название', 'Цена'],
+  options,
+  option,
+  setOption,
+  direction,
+  switchDirection,
   className,
   ...props
 }: SortProps) => {
   const [open, setOpen] = useState(false);
-  const [selected, setSelected] = useState(0);
-  const [direction, setDirection] = useState<'up' | 'down'>('down');
-
   const switchActive = () => {
     setOpen((open) => !open);
   };
 
   const handleSelectClick = (index: number) => {
-    setSelected(index);
+    setOption(index);
     setOpen(false);
-  };
-
-  const handleCheckboxClick = () => {
-    setDirection((direction) => (direction === 'up' ? 'down' : 'up'));
   };
 
   return (
@@ -41,17 +43,17 @@ export const Sort = ({
         })}
       >
         <div className={styles.sortSelectTitle} onClick={switchActive}>
-          {options[selected]}
+          {options[option]}
         </div>
         <div className={styles.sortSelectContent}>
-          {options.map((option, i) => (
+          {options.map((optionName, i) => (
             <Fragment key={i}>
               <input
                 id={`select${i}`}
                 className={styles.sortSelectInput}
                 type="radio"
                 name="select"
-                defaultChecked={i === selected}
+                defaultChecked={optionName === options[option]}
               />
               <label
                 htmlFor={`select${i}`}
@@ -59,7 +61,7 @@ export const Sort = ({
                 className={styles.sortSelectLabel}
                 onClick={() => handleSelectClick(i)}
               >
-                {option}
+                {options[i]}
               </label>
             </Fragment>
           ))}
@@ -70,7 +72,8 @@ export const Sort = ({
         className={styles.sortDirectionInput}
         type="checkbox"
         id="direction"
-        onChange={handleCheckboxClick}
+        onChange={switchDirection}
+        checked={direction === 'up'}
       />
       <label className={styles.sortDirectionLabel} htmlFor="direction">
         <SortIcon className={styles.sortIcon} />

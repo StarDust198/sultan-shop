@@ -17,11 +17,16 @@
   justify-content: center;
   text-align: center;
   width: 100px;
+  cursor: pointer;
+
   &Medium {
     width: 120px;
   }
   &Large {
     width: 140px;
+  }
+  &:hover {
+    transform: scale(1.05);
   }
 }
 

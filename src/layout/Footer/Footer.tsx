@@ -35,16 +35,16 @@ export const Footer = ({ className, ...props }: FooterProps) => (
           <div className={styles.footerTitle}>Меню&nbsp;сайта:</div>
           <ul>
             <li className={styles.footerItem}>
-              <a href="#">О компании</a>
+              <a href="!#">О компании</a>
             </li>
             <li className={styles.footerItem}>
-              <a href="#">Доставка и оплата</a>
+              <a href="!#">Доставка и оплата</a>
             </li>
             <li className={styles.footerItem}>
-              <a href="#">Возврат</a>
+              <a href="!#">Возврат</a>
             </li>
             <li className={styles.footerItem}>
-              <a href="#">Контакты</a>
+              <a href="!#">Контакты</a>
             </li>
           </ul>
         </div>
@@ -53,19 +53,19 @@ export const Footer = ({ className, ...props }: FooterProps) => (
           <div className={styles.footerTitle}>Категории:</div>
           <ul>
             <li className={styles.footerItem}>
-              <a href="#">Бытовая химия</a>
+              <a href="!#">Бытовая химия</a>
             </li>
             <li className={styles.footerItem}>
-              <a href="#">Косметика и гигиена</a>
+              <a href="!#">Косметика и гигиена</a>
             </li>
             <li className={styles.footerItem}>
-              <a href="#">Товары для дома</a>
+              <a href="!#">Товары для дома</a>
             </li>
             <li className={styles.footerItem}>
-              <a href="#">Товары для детей и мам</a>
+              <a href="!#">Товары для детей и мам</a>
             </li>
             <li className={styles.footerItem}>
-              <a href="#">Посуда</a>
+              <a href="!#">Посуда</a>
             </li>
           </ul>
         </div>
@@ -85,10 +85,10 @@ export const Footer = ({ className, ...props }: FooterProps) => (
             Связь в мессенджерах:
           </div>
           <div className={styles.footerMessengersLinks}>
-            <a href="#">
+            <a href="!#">
               <WhatsAppIcon />
             </a>
-            <a href="#">
+            <a href="!#">
               <TelegramIcon />
             </a>
           </div>

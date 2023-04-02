@@ -1,10 +1,9 @@
 @import '../../styles/variables';
 
-.goodsCardItem {
+.goodsCardElem {
   margin-top: 5px;
   font-size: 14px;
 
-  // width: 250px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

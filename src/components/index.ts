@@ -14,7 +14,7 @@ export * from './TabList/TabList';
 export * from './TabItem/TabItem';
 export * from './FilterPanel/FilterPanel';
 export * from './PriceFilter/PriceFilter';
-export * from './FieldFilter/FieldFilter';
+export * from './BrandFilter/BrandFilter';
 export * from './FieldFilterItem/FieldFilterItem';
 export * from './GoodsList/GoodsList';
 export * from './Pagination/Pagination';

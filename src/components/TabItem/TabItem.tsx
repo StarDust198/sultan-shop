@@ -1,4 +1,4 @@
-import { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react';
+import { DetailedHTMLProps, HTMLAttributes } from 'react';
 import cn from 'classnames';
 
 import styles from './TabItem.module.scss';
@@ -15,8 +15,6 @@ export const TabItem = ({
   className,
   ...props
 }: TabItemProps) => {
-  console.log(children, typeof children);
-
   return (
     <li
       className={cn(className, {

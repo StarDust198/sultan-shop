@@ -1,8 +1,12 @@
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
 import cn from 'classnames';
 
-import { TabItem } from 'components/TabItem/TabItem';
+import { useAppDispatch, useAppSelector } from 'app/hooks';
+import { selectCategories, setCategory } from 'features/products/productsSlice';
+import { TabItem } from 'components';
+
 import styles from './TabList.module.scss';
+import { CategoryKey } from 'interfaces';
 
 interface TabListProps
   extends DetailedHTMLProps<
@@ -17,6 +21,13 @@ export const TabList = ({
   className,
   ...props
 }: TabListProps) => {
+  const categories = useAppSelector(selectCategories);
+  const dispatch = useAppDispatch();
+
+  // const setCategory = (category: CategoryKey) => {
+  //   dispatch(setCategory(category));
+  // };
+
   return (
     <ul
       className={cn(styles.tabList, className, {
@@ -25,39 +36,13 @@ export const TabList = ({
       })}
       {...props}
     >
-      <TabItem mode={mode === 'links' ? 'link' : 'card'}>
-        Гигиеническая продукция
-      </TabItem>
-      <TabItem mode={mode === 'links' ? 'link' : 'card'}>
-        Гигиеническая продукция
-      </TabItem>
-      <TabItem mode={mode === 'links' ? 'link' : 'card'}>
-        Гигиеническая продукция
-      </TabItem>
-      <TabItem mode={mode === 'links' ? 'link' : 'card'}>
-        Гигиеническая продукция
-      </TabItem>
-      <TabItem mode={mode === 'links' ? 'link' : 'card'}>
-        Гигиеническая продукция
-      </TabItem>
-      <TabItem mode={mode === 'links' ? 'link' : 'card'}>
-        Уход за&nbsp;лицом
-      </TabItem>
-      <TabItem mode={mode === 'links' ? 'link' : 'card'}>
-        Уход за&nbsp;лицом
-      </TabItem>
-      <TabItem mode={mode === 'links' ? 'link' : 'card'}>
-        Уход за&nbsp;лицом
-      </TabItem>
-      <TabItem mode={mode === 'links' ? 'link' : 'card'}>
-        Уход за&nbsp;лицом
-      </TabItem>
-      <TabItem mode={mode === 'links' ? 'link' : 'card'}>
-        Уход за&nbsp;лицом
-      </TabItem>
-      <TabItem mode={mode === 'links' ? 'link' : 'card'}>
-        Уход за&nbsp;лицом
-      </TabItem>
+      {Object.entries(categories).map((category) => (
+        <TabItem
+          key={category[0]}
+          mode={mode === 'links' ? 'link' : 'card'}
+          onClick={() => dispatch(setCategory(category[0] as CategoryKey))}
+        >{`${category[1]}`}</TabItem>
+      ))}
     </ul>
   );
 };

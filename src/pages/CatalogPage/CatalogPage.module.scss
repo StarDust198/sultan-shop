@@ -3,15 +3,16 @@
 .catalogPage {
   display: grid;
   grid-template-columns: 238px 1fr auto;
-  gap: 20px 30px;
+  gap: 20px 50px;
   grid-template-areas:
     'route route route'
     'title title sort'
     'tabs tabs tabs'
     'filters cardList cardList'
-    'buttons cardList cardList'
-    'links cardList cardList';
-  grid-template-rows: repeat(5, min-content) 1fr;
+    'links cardList cardList'
+    'links pagination pagination'
+    'links description description';
+  grid-template-rows: repeat(4, min-content) 1fr;
 
   &Route {
     grid-area: route;
@@ -49,24 +50,84 @@
     margin-top: 20px;
     grid-area: links;
   }
+
+  &Pagination {
+    grid-area: pagination;
+    margin-top: 50px;
+  }
+
+  &Description {
+    grid-area: description;
+    margin-top: 68px;
+    max-width: 90%;
+    font-size: 14px;
+  }
 }
 
 @media (max-width: $l) {
   .catalogPage {
-    grid-template-columns: 240px 1fr;
+    grid-template-columns: 1fr 300px 1fr;
     grid-template-areas:
-      'route route'
-      'title title'
-      'filters links'
-      'sort sort'
-      'cardList cardList';
-    // justify-items: center;
+      'route route route'
+      'title title title'
+      '. filters .'
+      'tabs tabs tabs'
+      '. sort sort'
+      'cardList cardList cardList'
+      'pagination pagination pagination'
+      'description description description';
 
     & &Links {
       display: none;
     }
+  }
+}
+
+@media (max-width: $m) {
+  .catalogPage {
+    grid-template-areas:
+      'route route route'
+      'title title title'
+      '. filters .'
+      '. links .'
+      '. sort sort'
+      'cardList cardList cardList'
+      'pagination pagination pagination'
+      'description description description';
+
+    &Filters {
+      justify-self: unset;
+    }
+
+    & &Links {
+      display: flex;
+    }
     & &Tabs {
       display: none;
+    }
+  }
+}
+
+@media (max-width: $s) {
+  .catalogPage {
+    grid-template-columns: 1fr $min-card-width 1fr;
+    column-gap: 0;
+    grid-template-areas:
+      '. route .'
+      '. title .'
+      '. filters .'
+      '. links .'
+      '. sort .'
+      'cardList cardList cardList'
+      'pagination pagination pagination'
+      'description description description';
+
+    &Pagination {
+      margin-top: 45px;
+    }
+
+    &Description {
+      margin-top: 35px;
     }
   }
 }

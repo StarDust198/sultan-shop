@@ -13,7 +13,7 @@ interface ButtonProps
     DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>,
     'ref'
   > {
-  size?: 'sm' | 'md' | 'round';
+  size?: 'sm' | 'md' | 'round' | 'xs-round';
   link?: boolean;
   text?: string;
   Icon?: FunctionComponent<SVGProps<SVGSVGElement>> | null;
@@ -40,6 +40,7 @@ export const Button = ({
     [styles.buttonTransparent]: transparent,
     [styles.buttonSmall]: size === 'sm',
     [styles.buttonRound]: size === 'round',
+    [styles.buttonXsRound]: size === 'xs-round',
   });
 
   return link ? (

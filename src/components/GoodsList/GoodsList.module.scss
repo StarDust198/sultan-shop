@@ -3,6 +3,12 @@
 .goodsList {
   display: grid;
   justify-content: end;
-  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax($min-card-width, 1fr));
   gap: 21px;
+}
+
+@media (max-width: $s) {
+  .goodsList {
+    justify-items: center;
+  }
 }
