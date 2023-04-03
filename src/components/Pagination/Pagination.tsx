@@ -9,6 +9,7 @@ interface PaginationProps
   activePage: number;
   cardsPerPage?: number;
   totalCards: number;
+  setActivePage: (num: number) => void;
 }
 
 export const Pagination = ({
@@ -16,32 +17,46 @@ export const Pagination = ({
   cardsPerPage = 15,
   totalCards,
   className,
+  setActivePage,
   ...props
 }: PaginationProps) => {
   const pageNumbers = [];
 
-  for (let i = 1; i <= Math.ceil(totalCards / cardsPerPage); i++) {
+  const totalPages = Math.ceil(totalCards / cardsPerPage);
+  for (let i = 1; i <= totalPages; i++) {
     pageNumbers.push(i);
   }
 
   return (
     <nav className={cn(styles.pagination, className)} {...props}>
-      <button className={cn(styles.paginationBtn, styles.paginationPrev)}>
+      <button
+        className={cn(styles.paginationBtn, styles.paginationPrev)}
+        onClick={() =>
+          activePage !== 0 ? setActivePage(activePage - 1) : null
+        }
+      >
         <ArrowIcon />
       </button>
       <ul className={styles.paginationList}>
-        {pageNumbers.map((pageNumber) => (
+        {pageNumbers.map((pageNumber, index) => (
           <li
             className={cn(styles.paginationItem, {
-              [styles.active]: activePage === pageNumber,
+              [styles.active]: activePage === index,
             })}
             key={pageNumber}
           >
-            <a href="!#">{pageNumber}</a>
+            <a href="!#" onClick={() => setActivePage(index)}>
+              {pageNumber}
+            </a>
           </li>
         ))}
       </ul>
-      <button className={cn(styles.paginationBtn, styles.paginationNext)}>
+      <button
+        className={cn(styles.paginationBtn, styles.paginationNext)}
+        onClick={() =>
+          activePage !== totalPages - 1 ? setActivePage(activePage + 1) : null
+        }
+      >
         <ArrowIcon />
       </button>
     </nav>

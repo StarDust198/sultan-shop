@@ -89,6 +89,8 @@ export const {
 export const selectAllProducts = (state: RootState) => state.products.products;
 export const selectFilterBrands = (state: RootState) =>
   state.products.filter.brands;
+export const selectProductByCode = (state: RootState, code: number) =>
+  state.products.products.find((product) => product.code === code);
 
 export const selectSortedField = (state: RootState) =>
   state.products.sort.field;

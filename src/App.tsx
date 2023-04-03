@@ -1,9 +1,14 @@
-import { CatalogPage } from 'pages';
+import { Layout } from 'layout/Layout';
+import { CatalogPage, ProductPage, CartPage } from 'pages';
 
 function App() {
   return (
     <div className="App">
-      <CatalogPage />
+      <Layout>
+        <CatalogPage />
+        {/* <ProductPage /> */}
+        {/* <CartPage /> */}
+      </Layout>
     </div>
   );
 }

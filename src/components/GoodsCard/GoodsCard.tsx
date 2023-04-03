@@ -1,8 +1,8 @@
-import { Button, GoodsCardElem } from 'components';
+import { Button, GoodsCardElem, ProductSize } from 'components';
 import { IProduct } from 'interfaces';
-import { ReactComponent as VolumeIcon } from 'assets/volume.svg';
-import { ReactComponent as WeightIcon } from 'assets/weight.svg';
 import { ReactComponent as CartIcon } from 'assets/cart.svg';
+import { useAppDispatch } from 'app/hooks';
+import { addToCart } from 'features/cart/cartSlice';
 
 import styles from './GoodsCard.module.scss';
 
@@ -18,16 +18,15 @@ export const GoodsCard = ({
   brand,
   price,
 }: GoodsCardProps) => {
+  const dispatch = useAppDispatch();
+
   const titleArr = title.split(' ');
   const titleWoFirstWord = titleArr.slice(1).join(' ');
 
   return (
     <li className={styles.goodsCard}>
       <img className={styles.goodsCardImage} src={picSrc} alt={title} />
-      <div className={styles.goodsCardSize}>
-        {sizeType === 'weight' ? <WeightIcon /> : <VolumeIcon />}
-        <span>{size}</span>
-      </div>
+      <ProductSize className={styles.goodsCardSize} {...{ sizeType, size }} />
       <div className={styles.goodsCardTitle}>
         <b>{titleArr[0]}</b> {titleWoFirstWord}
       </div>
@@ -45,7 +44,10 @@ export const GoodsCard = ({
           Icon={CartIcon}
           text="в корзину"
           size="sm"
-        ></Button>
+          onClick={() =>
+            dispatch(addToCart({ code, quantity: 1, priceEach: price }))
+          }
+        />
       </div>
     </li>
   );
