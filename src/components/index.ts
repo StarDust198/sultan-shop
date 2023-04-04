@@ -21,3 +21,5 @@ export * from './Pagination/Pagination';
 export * from './ProductSize/ProductSize';
 export * from './ProductPrice/ProductPrice';
 export * from './ProductQuantity/ProductQuantity';
+export * from './CartItem/CartItem';
+export * from './ThanksMessage/ThanksMessage';

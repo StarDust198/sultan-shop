@@ -1,4 +1,36 @@
 @import '../../styles/variables';
 
 .cartItem {
+  display: grid;
+  grid-template-columns: 281px 1fr repeat(6, min-content);
+  gap: 44px;
+  align-items: center;
+  padding-block: 50px;
+  border-top: 1px solid $gray;
+  border-bottom: 1px solid $gray;
+  height: 291px;
+
+  &Img {
+    justify-self: center;
+    height: 191px;
+  }
+  &Info {
+    max-width: 480px;
+  }
+  &Title {
+    margin-top: 10px;
+    color: $black;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 700;
+    height: 72px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &Description {
+    font-size: 12px;
+    font-weight: 300;
+    margin-top: 10px;
+    max-width: 444px;
+  }
 }

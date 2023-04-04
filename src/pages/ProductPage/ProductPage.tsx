@@ -16,15 +16,25 @@ import {
 } from 'components';
 
 import styles from './ProductPage.module.scss';
+import { RouteMatch } from 'react-router-dom';
 
 interface ProductPageProps
-  extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
+  extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+  // match: RouteMatch;
+}
 
-export const ProductPage = ({ className, ...props }: ProductPageProps) => {
-  const product = useAppSelector((state) =>
-    selectProductByCode(state, 4605559097585)
-  );
+export const ProductPage = ({
+  // match,
+  className,
+  ...props
+}: ProductPageProps) => {
   const [quantity, setQuantity] = useState(0);
+  // const { productId } = match.params;
+  const product = useAppSelector((state) =>
+    selectProductByCode(state, 4674747577548)
+  );
+  // if (!productId || isNaN(+productId))
+  //   return <h1>404 продукт не найден в базе</h1>;
 
   if (!product) return <h1>404 продукт не найден в базе</h1>;
 

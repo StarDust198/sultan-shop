@@ -5,6 +5,7 @@ import { useAppDispatch } from 'app/hooks';
 import { addToCart } from 'features/cart/cartSlice';
 
 import styles from './GoodsCard.module.scss';
+import { numberWithSpaces } from 'helpers/utils';
 
 interface GoodsCardProps extends IProduct {}
 
@@ -38,7 +39,7 @@ export const GoodsCard = ({
       </div>
 
       <div className={styles.goodsCardFooter}>
-        <div className={styles.goodsCardPrice}>{price}</div>
+        <div className={styles.goodsCardPrice}>{numberWithSpaces(price)}</div>
         <Button
           className={styles.goodsCardCartBtn}
           Icon={CartIcon}

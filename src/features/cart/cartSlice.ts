@@ -18,6 +18,11 @@ export const cartSlice = createSlice({
         state[code] = { quantity, priceEach };
       }
     },
+    setCartItemQuantity: (state, action: PayloadAction<ICartItem>) => {
+      const { code, quantity, priceEach } = action.payload;
+      state[code].quantity = quantity;
+      state[code].priceEach = priceEach;
+    },
     removeOneFromCart: (state, action: PayloadAction<number>) => {
       const code = action.payload;
       if (state[code]) state[code].quantity -= 1;
@@ -27,14 +32,22 @@ export const cartSlice = createSlice({
       if (state[code]) state[code].quantity = 0;
     },
     clearCart: (state) => {
-      state = {};
+      return {};
     },
   },
 });
 
-export const { addToCart, removeOneFromCart, deleteFromCart, clearCart } =
-  cartSlice.actions;
+export const {
+  addToCart,
+  removeOneFromCart,
+  deleteFromCart,
+  clearCart,
+  setCartItemQuantity,
+} = cartSlice.actions;
 
+export const selectCartProducts = (state: RootState) => state.cart;
+export const selectCartItemQuantity = (state: RootState, code: number) =>
+  state.cart[code]?.quantity;
 export const selectCartItems = (state: RootState) =>
   Object.values(state.cart).reduce((acc, item) => acc + item.quantity, 0);
 export const selectCartTotalPrice = (state: RootState) =>

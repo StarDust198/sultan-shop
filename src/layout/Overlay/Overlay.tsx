@@ -1,7 +1,10 @@
+import { DetailedHTMLProps, HTMLAttributes } from 'react';
+import cn from 'classnames';
 import styles from './Overlay.module.scss';
 
-interface OverlayProps {}
+interface OverlayProps
+  extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
 
-export const Overlay = ({}: OverlayProps) => (
-  <div className={styles.overlay}></div>
+export const Overlay = ({ className, ...props }: OverlayProps) => (
+  <div className={cn(styles.overlay, className)} {...props}></div>
 );

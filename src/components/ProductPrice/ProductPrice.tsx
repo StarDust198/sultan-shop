@@ -2,6 +2,7 @@ import { DetailedHTMLProps, HTMLAttributes } from 'react';
 import cn from 'classnames';
 
 import styles from './ProductPrice.module.scss';
+import { numberWithSpaces } from 'helpers/utils';
 
 interface ProductPriceProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
@@ -13,12 +14,9 @@ export const ProductPrice = ({
   className,
   ...props
 }: ProductPriceProps) => {
-  const formatPrice = (price: number): string =>
-    price.toString().replace('.', ',');
-
   return (
     <div className={cn(styles.productPrice, className)} {...props}>
-      {formatPrice(price)} ₸
+      {numberWithSpaces(price)}&nbsp;₸
     </div>
   );
 };
